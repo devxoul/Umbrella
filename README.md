@@ -1,9 +1,9 @@
-# EventAnalytics
+# Umbrella
 
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
-[![CocoaPods](http://img.shields.io/cocoapods/v/EventAnalytics.svg)](https://cocoapods.org/pods/EventAnalytics)
-[![Build Status](https://travis-ci.org/devxoul/EventAnalytics.svg?branch=master)](https://travis-ci.org/devxoul/EventAnalytics)
-[![Codecov](https://img.shields.io/codecov/c/github/devxoul/EventAnalytics.svg)](https://codecov.io/gh/devxoul/EventAnalytics)
+[![CocoaPods](http://img.shields.io/cocoapods/v/Umbrella.svg)](https://cocoapods.org/pods/Umbrella)
+[![Build Status](https://travis-ci.org/devxoul/Umbrella.svg?branch=master)](https://travis-ci.org/devxoul/Umbrella)
+[![Codecov](https://img.shields.io/codecov/c/github/devxoul/Umbrella.svg)](https://codecov.io/gh/devxoul/Umbrella)
 
 Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moya/Moya).
 
@@ -21,7 +21,7 @@ Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moy
 
 ## Why?
 
-There are many tools for mobile app analytics such as Firebase, Google Analytics, Fabric Answers, Flurry, Mixpanel, etc. You might use one or more of those in your application. But most of those SDKs have some problems: if you use multiple analytics tools, your code will be messed up. And the SDKs take event name as a string and parameters as a dictionary which is not guaranteed by Swift compiler. It means that if you change the event definition, you should find all related code by your hand. It has an opportunity that cause a human error. **EventAnalytics uses Swift enums and the associated values to solve these problems.**
+There are many tools for mobile app analytics such as Firebase, Google Analytics, Fabric Answers, Flurry, Mixpanel, etc. You might use one or more of those in your application. But most of those SDKs have some problems: if you use multiple analytics tools, your code will be messed up. And the SDKs take event name as a string and parameters as a dictionary which is not guaranteed by Swift compiler. It means that if you change the event definition, you should find all related code by your hand. It has an opportunity that cause a human error. **Umbrella uses Swift enums and the associated values to solve these problems.**
 
 ## Features
 
@@ -116,7 +116,7 @@ final class FirebaseProvider: ProviderType {
 }
 ```
 
-> **Note**: At this time EventAnalytics doesn't provide default providers but it will provide popular provider classes in the future.
+> **Note**: At this time Umbrella doesn't provide default providers but it will provide popular provider classes in the future.
 
 ### Creating Analytics
 
@@ -141,15 +141,15 @@ analytics.log(.signup(username: "devxoul"))
 * **Using [CocoaPods](https://cocoapods.org)**:
 
     ```ruby
-    pod 'EventAnalytics'
+    pod 'Umbrella'
     ```
 
 * **Using [Carthage](https://github.com/Carthage/Carthage)**:
 
     ```
-    github "devxoul/EventAnalytics"
+    github "devxoul/Umbrella"
     ```
 
 ## License
 
-EventAnalytics is under MIT license. See the [LICENSE](LICENSE) file for more info.
+Umbrella is under MIT license. See the [LICENSE](LICENSE) file for more info.

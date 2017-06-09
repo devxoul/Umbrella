@@ -1,4 +1,4 @@
-import EventAnalytics
+import Umbrella
 
 enum TestEvent: EventType {
   case login(username: String)

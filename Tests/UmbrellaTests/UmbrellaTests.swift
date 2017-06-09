@@ -1,7 +1,7 @@
 import XCTest
-import EventAnalytics
+import Umbrella
 
-class EventAnalyticsTests: XCTestCase {
+class UmbrellaTests: XCTestCase {
   var analytics: Analytics<TestEvent>!
   var firebaseProvider: MockFirebaseProvider!
   var fabricProvider: MockFabricProvider!

@@ -3,12 +3,12 @@ language: objective-c
 sudo: required
 env:
   global:
-    - PROJECT="EventAnalytics.xcodeproj"
-    - SCHEME="EventAnalytics"
+    - PROJECT="Umbrella.xcodeproj"
+    - SCHEME="Umbrella"
     - IOS_SDK="iphonesimulator10.3"
     - MACOS_SDK="macosx10.12"
     - TVOS_SDK="appletvsimulator10.2"
-    - FRAMEWORK="EventAnalytics"
+    - FRAMEWORK="Umbrella"
   matrix:
     - SDK="$IOS_SDK"      DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.3.1"
     - SDK="$MACOS_SDK"    DESTINATION="arch=x86_64"
@@ -33,4 +33,4 @@ script:
     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'EventAnalytics'
+  - bash <(curl -s https://codecov.io/bash) -J 'Umbrella'
