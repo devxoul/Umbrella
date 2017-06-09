@@ -7,6 +7,18 @@
 
 Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moya/Moya).
 
+## Table of Contents
+
+* [Why?](#why)
+* [Features](#features)
+* [At a Glance](#at-a-glance)
+* [Getting Started](#getting-started)
+    * [Defining Events](#defining-events)
+    * [Adding Providers](#adding-providers)
+    * [Creating Analytics](#creating-analytics)
+* [Installation](#installation)
+* [License](#license)
+
 ## Why?
 
 There are many tools for mobile app analytics such as Firebase, Google Analytics, Fabric Answers, Flurry, Mixpanel, etc. You might use one or more of those in your application. But most of those SDKs have some problems: if you use multiple analytics tools, your code will be messed up. And the SDKs take event name as a string and parameters as a dictionary which is not guaranteed by Swift compiler. It means that if you change the event definition, you should find all related code by your hand. It has an opportunity that cause a human error. **EventAnalytics uses Swift enums and the associated values to solve these problems.**
