@@ -4,7 +4,7 @@ enum TestEvent: EventType {
   case login(username: String)
   case purchase(productID: Int, price: Float)
 
-  func name(for provider: ProviderType) -> String {
+  func name(for provider: ProviderType) -> String? {
     switch self {
     case .login:
       switch provider {
@@ -17,7 +17,7 @@ enum TestEvent: EventType {
     case .purchase:
       switch provider {
       case is MockFabricProvider:
-        return "Purchase"
+        return nil
       default:
         return "purchase"
       }
@@ -37,7 +37,7 @@ enum TestEvent: EventType {
     case let .purchase(productID, price):
       switch provider {
       case is MockFabricProvider:
-        return ["Product ID": productID, "Price": price]
+        return nil
       default:
         return ["product_id": productID, "price": price]
       }

@@ -3,7 +3,7 @@ public protocol ProviderType {
 }
 
 public protocol EventType {
-  func name(for provider: ProviderType) -> String
+  func name(for provider: ProviderType) -> String?
   func parameters(for provider: ProviderType) -> [String: Any]?
 }
 
@@ -20,7 +20,7 @@ final public class Analytics<Event: EventType> {
 
   public func log(event: Event) {
     for provider in self.providers {
-      let eventName = event.name(for: provider)
+      guard let eventName = event.name(for: provider) else { continue }
       let parameters = event.parameters(for: provider)
       provider.log(eventName, parameters: parameters)
     }
