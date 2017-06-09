@@ -1,4 +1,4 @@
-# Umbrella
+# ☂️ Umbrella
 
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
 [![CocoaPods](http://img.shields.io/cocoapods/v/Umbrella.svg)](https://cocoapods.org/pods/Umbrella)
