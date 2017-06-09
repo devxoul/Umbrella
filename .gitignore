@@ -4,6 +4,7 @@ docs/
 /.build
 /Packages
 /*.xcodeproj
+/*.xcworkspace
 **/xcuserdata
 **/xcshareddata
 Pods/
