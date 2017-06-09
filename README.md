@@ -17,6 +17,38 @@ There are many tools for mobile app analytics such as Firebase, Google Analytics
 * 🎯 Logging events to multiple analytics providers at once.
 * 🎨 Creating custom analytics providers.
 
+## At a Glance
+
+**Before** 🤢
+
+```swift
+FIRAnalytics.logEvent(withName: kFIREventEcommercePurchase, parameters: [
+  kFIRParameterCurrency: "USD" as NSObject,
+  kFIRParameterValue: 9.99 as NSNumber,
+  kFIRParameterTransactionID: "20170709123456" as NSObject,
+])
+Flurry.logEvent("purchase", withParameters: [
+  "Currency": "USD",
+  "Price": 9.99,
+  "Transaction ID": "20170709123456"
+])
+MyCustomAnalytics.logEvent("purchase"withParameters: [
+  "currency": "USD",
+  "price": 9.99,
+  "transaction_id": "20170709123456"
+])
+```
+
+**After** 😊
+
+```swift
+let analytics = Analytics<MyAppEvent>()
+analytics.register(provider: FirebaseProvider())
+analytics.register(provider: FlurryProvider())
+analytics.register(provider: MyCustomProvider())
+analytics.log(.purchase(currency: "USD", price: 9.99, transactionID: "20170709123456"))
+```
+
 ## Getting Started
 
 ### Defining Events
