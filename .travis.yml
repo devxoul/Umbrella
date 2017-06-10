@@ -3,7 +3,7 @@ language: objective-c
 sudo: required
 env:
   global:
-    - PROJECT="Umbrella.xcodeproj"
+    - WORKSPACE="Umbrella.xcworkspace"
     - SCHEME="Umbrella"
     - IOS_SDK="iphonesimulator10.3"
     - MACOS_SDK="macosx10.12"
@@ -11,8 +11,6 @@ env:
     - FRAMEWORK="Umbrella"
   matrix:
     - SDK="$IOS_SDK"      DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.3.1"
-    - SDK="$MACOS_SDK"    DESTINATION="arch=x86_64"
-    - SDK="$TVOS_SDK"     DESTINATION="OS=10.2,name=Apple TV 1080p"
 
 install:
   - eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
@@ -20,11 +18,12 @@ install:
 
 before_script:
   - set -o pipefail
-  - swift package generate-xcodeproj
+  - pod repo update
+  - make project
 
 script:
   - xcodebuild clean build test
-    -project "$PROJECT"
+    -workspace "$WORKSPACE"
     -scheme "$SCHEME"
     -sdk "$SDK"
     -destination "$DESTINATION"
