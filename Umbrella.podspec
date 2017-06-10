@@ -25,4 +25,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaFirebase/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "Flurry" do |ss|
+    ss.source_files = "Sources/UmbrellaFlurry/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end

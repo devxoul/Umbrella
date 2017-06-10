@@ -15,6 +15,7 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.0):
     - FirebaseCore (~> 4.0)
+  - Flurry-iOS-SDK/FlurrySDK (8.1.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
@@ -22,6 +23,7 @@ PODS:
 DEPENDENCIES:
   - Answers
   - Firebase/Analytics
+  - Flurry-iOS-SDK/FlurrySDK
 
 SPEC CHECKSUMS:
   Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
@@ -30,8 +32,9 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Flurry-iOS-SDK: 51065be4436f3e21fc8d3d7bb0b7d6869df6333d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
 
-PODFILE CHECKSUM: e6b86d3965fc545aa084dd3ca895a60ad94d3f89
+PODFILE CHECKSUM: db7b1059e5b285325a9228036526343bf729c14f
 
 COCOAPODS: 1.2.1

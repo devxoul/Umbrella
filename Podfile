@@ -21,3 +21,8 @@ target 'UmbrellaFirebase' do
   platform :ios, '8.0'
   pod 'Firebase/Analytics'
 end
+
+target 'UmbrellaFlurry' do
+  platform :ios, '8.0'
+  pod 'Flurry-iOS-SDK/FlurrySDK'
+end
