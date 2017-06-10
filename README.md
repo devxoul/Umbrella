@@ -14,9 +14,11 @@ Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moy
 * [At a Glance](#at-a-glance)
 * [Getting Started](#getting-started)
     * [Defining Events](#defining-events)
-    * [Adding Providers](#adding-providers)
-    * [Creating Analytics](#creating-analytics)
+    * [Using Analytics](#using-analytics)
+    * [Built-in Providers](#built-in-providers)
+    * [Creating Custom Providers](#creating-custom-providers)
 * [Installation](#installation)
+* [Contributing](#contributing)
 * [License](#license)
 
 ## Why?
@@ -104,51 +106,73 @@ extension MyAppEvent: EventType {
 
 You can even provide different event names and parameters by `provider`s.
 
-### Adding Providers
+### Using Analytics
 
-A prodiver represents an actual analytics service provider. Firebase, Google Analytics and other services can become providers. It's easy to create a provider: just create a class and conform to the protocol `ProviderType`.
-
-```swift
-final class FirebaseProvider: ProviderType {
-  func log(_ eventName: String, parameters: [String: Any]?) {
-    FIRAnalytics.logEvent(withName: eventName, parameters: parameters)
-  }
-}
-```
-
-> **Note**: At this time Umbrella doesn't provide default providers but it will provide popular provider classes in the future.
-
-### Creating Analytics
-
-The last step is to create an instance of `Analytics`. You can define it anywhere but I'd recommended to create an instance as a global constant and register providers in `application(_:didFinishLaunchingWithOptions:)`.
+You can define an `Analytics` instance anywhere but it's recommended to define at a global scope.
 
 ```swift
 let analytics = Analytics<MyAppEvent>()
-analytics.register(provider: FirebaseProvider())
-analytics.register(provider: GoogleAnalyticsProvider())
-analytics.register(provider: FlurryProvider())
-analytics.register(provider: MyCustomProvider())
 ```
 
-With this instance, you can log the events 🎉
+Then you should register providers. A prodiver is a wrapper for an actual analytics service such as Firebase and Fabric Answers. It's recommended to register providers in `application(_:didFinishLaunchingWithOptions:)`.
+
+```swift
+analytics.register(provider: AnswersProvider())
+analytics.register(provider: FirebaseProvider())
+analytics.register(provider: FlurryProvider())
+analytics.register(provider: MyAwesomeProvider())
+```
+
+If you finished those steps, you can now log the events 🎉
 
 ```swift
 analytics.log(.signup(username: "devxoul"))
 ```
 
+### Built-in Providers
+
+There are several built-in providers.
+
+* AnswersProvider ([Answers](https://cocoapods.org/pods/Answers))
+* FirebaseProvider ([Firebase/Analytics](https://cocoapods.org/pods/Firebase))
+* FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
+* MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
+
+If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
+
+### Creating Custom Providers
+
+If there's no built-in provider for the serivce you're using, you can also create your own. It's easy to create a provider: just create a class and conform to the protocol `ProviderType`.
+
+```swift
+final class MyAwesomeProvider: ProviderType {
+  func log(_ eventName: String, parameters: [String: Any]?) {
+    AwesomeAnalytics.logEvent(withName: eventName, parameters: parameters)
+  }
+}
+```
+
 ## Installation
 
-* **Using [CocoaPods](https://cocoapods.org)**:
+Umbrella currently support [CocoaPods](https://cocoapods.org) only.
 
-    ```ruby
-    pod 'Umbrella'
-    ```
+```ruby
+pod 'Umbrella'
+pod 'Umbrella/Firebase' # using with built-in FirebaseProvider
+pod 'Umbrella/...'
+```
 
-* **Using [Carthage](https://github.com/Carthage/Carthage)**:
+## Contributing
 
-    ```
-    github "devxoul/Umbrella"
-    ```
+Any discussions and pull requests are welcomed 💖
+
+To create a Xcode workspace:
+
+```bash
+$ make project
+```
+
+This will automatically create **`Umbrella.xcworkspace`** and perform `pod install`.
 
 ## License
 
