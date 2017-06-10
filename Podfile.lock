@@ -1,4 +1,7 @@
 PODS:
+  - Answers (1.3.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - Firebase/Analytics (4.0.2):
     - Firebase/Core
   - Firebase/Core (4.0.2):
@@ -17,15 +20,18 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
 
 DEPENDENCIES:
+  - Answers
   - Firebase/Analytics
 
 SPEC CHECKSUMS:
+  Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
 
-PODFILE CHECKSUM: 1442f83d4a077a51c3c68b9d258151980ce1233f
+PODFILE CHECKSUM: e6b86d3965fc545aa084dd3ca895a60ad94d3f89
 
 COCOAPODS: 1.2.1

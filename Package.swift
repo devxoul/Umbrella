@@ -6,6 +6,7 @@ let package = Package(
   name: "Umbrella",
   targets: [
     Target(name: "Umbrella"),
+    Target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
     Target(name: "UmbrellaFirebase", dependencies: ["Umbrella"]),
   ]
 )

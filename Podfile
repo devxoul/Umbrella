@@ -12,6 +12,11 @@ def target(name, options = nil)
   end
 end
 
+target 'UmbrellaAnswers' do
+  platform :ios, '8.0'
+  pod 'Answers'
+end
+
 target 'UmbrellaFirebase' do
   platform :ios, '8.0'
   pod 'Firebase/Analytics'
