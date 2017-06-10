@@ -3,5 +3,8 @@
 import PackageDescription
 
 let package = Package(
-  name: "Umbrella"
+  name: "Umbrella",
+  targets: [
+    Target(name: "Umbrella"),
+  ]
 )
