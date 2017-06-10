@@ -82,7 +82,7 @@ Then make the enum to conform the protocol `EventType`. It requires two function
 ```swift
 extension MyAppEvent: EventType {
   /// An event name to be logged
-  func name(for provider: ProviderType) -> String {
+  func name(for provider: ProviderType) -> String? {
     switch self {
     case .signup: return "signup"
     case .viewContent: return "view_content"
