@@ -30,4 +30,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaFlurry/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "Mixpanel" do |ss|
+    ss.source_files = "Sources/UmbrellaMixpanel/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end

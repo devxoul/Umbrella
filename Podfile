@@ -26,3 +26,8 @@ target 'UmbrellaFlurry' do
   platform :ios, '8.0'
   pod 'Flurry-iOS-SDK/FlurrySDK'
 end
+
+target 'UmbrellaMixpanel' do
+  platform :ios, '8.0'
+  pod 'Mixpanel'
+end
