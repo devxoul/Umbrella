@@ -46,7 +46,7 @@ Flurry.logEvent("purchase", withParameters: [
   "Price": 9.99,
   "Transaction ID": "20170709123456"
 ])
-MyCustomAnalytics.logEvent("purchase"withParameters: [
+MyCustomAnalytics.logEvent("purchase", withParameters: [
   "currency": "USD",
   "price": 9.99,
   "transaction_id": "20170709123456"
