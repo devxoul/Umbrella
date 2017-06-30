@@ -10,6 +10,8 @@ public protocol EventType {
 final public class Analytics<Event: EventType> {
   private var providers: [ProviderType] = []
 
+  public var commonParameter: [String: Any]?
+
   public init() {
     // I'm Analytics 👋
   }
@@ -21,7 +23,12 @@ final public class Analytics<Event: EventType> {
   public func log(event: Event) {
     for provider in self.providers {
       guard let eventName = event.name(for: provider) else { continue }
-      let parameters = event.parameters(for: provider)
+      var parameters = event.parameters(for: provider)
+      if let _ = parameters {
+        commonParameter?.enumerated().forEach { parameters?[$0.element.key] = $0.element.value }
+      } else {
+        parameters = commonParameter
+      }
       provider.log(eventName, parameters: parameters)
     }
   }
