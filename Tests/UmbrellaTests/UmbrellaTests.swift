@@ -15,7 +15,7 @@ class UmbrellaTests: XCTestCase {
 
   func testAnalytics_singleProvider() {
     self.analytics.register(provider: self.firebaseProvider)
-    self.analytics.log(event: .login(username: "devxoul"))
+    self.analytics.log(.login(username: "devxoul"))
     XCTAssertEqual(self.firebaseProvider.events.count, 1)
     XCTAssertEqual(self.firebaseProvider.events[0].name, "login")
     XCTAssertEqual(self.firebaseProvider.events[0].parameters!.count, 1)
@@ -24,15 +24,15 @@ class UmbrellaTests: XCTestCase {
 
   func testAnalytics_singleProvider_nilName() {
     self.analytics.register(provider: self.fabricProvider)
-    self.analytics.log(event: .purchase(productID: 123, price: 99.9))
+    self.analytics.log(.purchase(productID: 123, price: 99.9))
     XCTAssertEqual(self.fabricProvider.events.count, 0)
   }
 
   func testAnalytics_multipleProvider() {
     self.analytics.register(provider: self.firebaseProvider)
     self.analytics.register(provider: self.fabricProvider)
-    self.analytics.log(event: .login(username: "devxoul"))
-    self.analytics.log(event: .purchase(productID: 123, price: 99.9))
+    self.analytics.log(.login(username: "devxoul"))
+    self.analytics.log(.purchase(productID: 123, price: 99.9))
 
     XCTAssertEqual(self.firebaseProvider.events.count, 2)
     XCTAssertEqual(self.firebaseProvider.events[0].name, "login")

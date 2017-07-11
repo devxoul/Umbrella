@@ -18,7 +18,7 @@ final public class Analytics<Event: EventType> {
     self.providers.append(provider)
   }
 
-  public func log(event: Event) {
+  public func log(_ event: Event) {
     for provider in self.providers {
       guard let eventName = event.name(for: provider) else { continue }
       let parameters = event.parameters(for: provider)
