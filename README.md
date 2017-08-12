@@ -136,6 +136,7 @@ There are several built-in providers.
 * AnswersProvider ([Answers](https://cocoapods.org/pods/Answers))
 * FirebaseProvider ([Firebase/Analytics](https://cocoapods.org/pods/Firebase))
 * FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
+* LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))
 * MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
 
 If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
