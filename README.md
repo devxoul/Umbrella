@@ -134,6 +134,7 @@ analytics.log(.signup(username: "devxoul"))
 There are several built-in providers.
 
 * AnswersProvider ([Answers](https://cocoapods.org/pods/Answers))
+* AppsFlyerProvider ([AppsFlyerFramework](http://cocoapods.org/pods/AppsFlyerFramework))
 * FirebaseProvider ([Firebase/Analytics](https://cocoapods.org/pods/Firebase))
 * FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
 * LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))

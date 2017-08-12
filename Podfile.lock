@@ -1,6 +1,7 @@
 PODS:
   - Answers (1.3.4):
     - Fabric (~> 1.6.3)
+  - AppsFlyerFramework (4.7.11)
   - Fabric (1.6.11)
   - Firebase/Analytics (4.0.2):
     - Firebase/Core
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - Answers
+  - AppsFlyerFramework
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
   - Localytics
@@ -31,6 +33,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
+  AppsFlyerFramework: ece902d4233177d4e9db1429c7a5df5fad8e9f07
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
@@ -41,6 +44,6 @@ SPEC CHECKSUMS:
   Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
   Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
 
-PODFILE CHECKSUM: 3aef4708961a2d966fa4a974098bccd3b186abb6
+PODFILE CHECKSUM: 3b61fc085b57c82424ec884e3f2e7bcee56e14cc
 
 COCOAPODS: 1.2.1
