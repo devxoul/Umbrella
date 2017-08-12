@@ -9,6 +9,7 @@ let package = Package(
     Target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
     Target(name: "UmbrellaFirebase", dependencies: ["Umbrella"]),
     Target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
+    Target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     Target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
   ]
 )

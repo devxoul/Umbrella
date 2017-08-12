@@ -27,6 +27,11 @@ target 'UmbrellaFlurry' do
   pod 'Flurry-iOS-SDK/FlurrySDK'
 end
 
+target 'UmbrellaLocalytics' do
+  platform :ios, '8.0'
+  pod 'Localytics'
+end
+
 target 'UmbrellaMixpanel' do
   platform :ios, '8.0'
   pod 'Mixpanel'
