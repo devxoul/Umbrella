@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Umbrella"
-  s.version          = "0.4.0"
+  s.version          = "0.5.0"
   s.summary          = "Analytics abstraction layer for Swift"
   s.homepage         = "https://github.com/devxoul/Umbrella"
   s.license          = { :type => "MIT", :file => "LICENSE" }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
 
-  s.default_subspec = 'Core'
+  s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
     ss.source_files = "Sources/Umbrella/*.swift"
