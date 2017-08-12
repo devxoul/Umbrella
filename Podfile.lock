@@ -19,12 +19,14 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Localytics (4.4.1)
   - Mixpanel (3.1.5)
 
 DEPENDENCIES:
   - Answers
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
+  - Localytics
   - Mixpanel
 
 SPEC CHECKSUMS:
@@ -36,8 +38,9 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   Flurry-iOS-SDK: 51065be4436f3e21fc8d3d7bb0b7d6869df6333d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
   Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
 
-PODFILE CHECKSUM: c8b3212dd7c06307aeffd784251eecd94806957f
+PODFILE CHECKSUM: 3aef4708961a2d966fa4a974098bccd3b186abb6
 
 COCOAPODS: 1.2.1

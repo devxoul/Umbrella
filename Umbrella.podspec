@@ -33,6 +33,11 @@ Pod::Spec.new do |s|
     ss.dependency "Umbrella/Core"
   end
 
+  s.subspec "Localytics" do |ss|
+    ss.source_files = "Sources/UmbrellaLocalytics/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
+
   s.subspec "Mixpanel" do |ss|
     ss.source_files = "Sources/UmbrellaMixpanel/*.swift"
     ss.dependency "Umbrella/Core"
