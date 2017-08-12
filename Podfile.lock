@@ -1,6 +1,12 @@
 PODS:
   - Answers (1.3.4):
     - Fabric (~> 1.6.3)
+  - Appboy-iOS-SDK (3.0.0):
+    - Appboy-iOS-SDK/UI (= 3.0.0)
+  - Appboy-iOS-SDK/Core (3.0.0)
+  - Appboy-iOS-SDK/UI (3.0.0):
+    - Appboy-iOS-SDK/Core
+    - SDWebImage/GIF (~> 4.0)
   - AppsFlyerFramework (4.7.11)
   - Fabric (1.6.11)
   - Firebase/Analytics (4.0.2):
@@ -16,15 +22,21 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.0):
     - FirebaseCore (~> 4.0)
+  - FLAnimatedImage (1.0.12)
   - Flurry-iOS-SDK/FlurrySDK (8.1.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - Localytics (4.4.1)
   - Mixpanel (3.1.5)
+  - SDWebImage/Core (4.1.0)
+  - SDWebImage/GIF (4.1.0):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - Answers
+  - Appboy-iOS-SDK
   - AppsFlyerFramework
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
@@ -33,17 +45,20 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
+  Appboy-iOS-SDK: b78abfe6915d4a62634e5e9581ce3a6fc13ef353
   AppsFlyerFramework: ece902d4233177d4e9db1429c7a5df5fad8e9f07
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Flurry-iOS-SDK: 51065be4436f3e21fc8d3d7bb0b7d6869df6333d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
   Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: 3b61fc085b57c82424ec884e3f2e7bcee56e14cc
+PODFILE CHECKSUM: 36988e53c5e56be55a41f802ffa3c350ad504748
 
 COCOAPODS: 1.2.1

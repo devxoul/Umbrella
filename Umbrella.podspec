@@ -23,6 +23,11 @@ Pod::Spec.new do |s|
     ss.dependency "Umbrella/Core"
   end
 
+  s.subspec "Appboy" do |ss|
+    ss.source_files = "Sources/UmbrellaAppboy/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
+
   s.subspec "AppsFlyer" do |ss|
     ss.source_files = "Sources/UmbrellaAppsFlyer/*.swift"
     ss.dependency "Umbrella/Core"
