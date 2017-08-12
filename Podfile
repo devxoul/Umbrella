@@ -6,6 +6,11 @@ target 'UmbrellaAnswersTests' do
   pod 'Answers'
 end
 
+target 'UmbrellaAppboyTests' do
+  platform :ios, '8.0'
+  pod 'Appboy-iOS-SDK'
+end
+
 target 'UmbrellaAppsFlyerTests' do
   platform :ios, '8.0'
   pod 'AppsFlyerFramework'
