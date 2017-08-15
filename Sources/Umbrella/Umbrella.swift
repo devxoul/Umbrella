@@ -13,18 +13,18 @@ public protocol EventType {
   func parameters(for provider: ProviderType) -> [String: Any]?
 }
 
-final public class Analytics<Event: EventType>: AnalyticsType {
-  private var providers: [ProviderType] = []
+open class Analytics<Event: EventType>: AnalyticsType {
+  private(set) open var providers: [ProviderType] = []
 
   public init() {
     // I'm Analytics 👋
   }
 
-  public func register(provider: ProviderType) {
+  open func register(provider: ProviderType) {
     self.providers.append(provider)
   }
 
-  public func log(_ event: Event) {
+  open func log(_ event: Event) {
     for provider in self.providers {
       guard let eventName = event.name(for: provider) else { continue }
       let parameters = event.parameters(for: provider)
