@@ -1,3 +1,9 @@
+public protocol AnalyticsType {
+  associatedtype Event: EventType
+  func register(provider: ProviderType)
+  func log(_ event: Event)
+}
+
 public protocol ProviderType {
   func log(_ eventName: String, parameters: [String: Any]?)
 }
@@ -7,7 +13,7 @@ public protocol EventType {
   func parameters(for provider: ProviderType) -> [String: Any]?
 }
 
-final public class Analytics<Event: EventType> {
+final public class Analytics<Event: EventType>: AnalyticsType {
   private var providers: [ProviderType] = []
 
   public init() {
