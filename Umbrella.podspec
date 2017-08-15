@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Umbrella"
-  s.version          = "0.5.1"
+  s.version          = "0.5.2"
   s.summary          = "Analytics abstraction layer for Swift"
   s.homepage         = "https://github.com/devxoul/Umbrella"
   s.license          = { :type => "MIT", :file => "LICENSE" }
