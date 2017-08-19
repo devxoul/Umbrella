@@ -33,4 +33,4 @@ script:
   - pod lib lint --allow-warnings
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J 'Umbrella'
+  - bash <(curl -s https://codecov.io/bash) -J 'Umbrella' -X xcodeplist
