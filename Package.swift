@@ -1,17 +1,34 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.0
 
 import PackageDescription
 
 let package = Package(
   name: "Umbrella",
+  products: [
+    .library(name: "Umbrella", targets: ["Umbrella"]),
+    .library(name: "UmbrellaAnswers", targets: ["UmbrellaAnswers"]),
+    .library(name: "UmbrellaAppboy", targets: ["UmbrellaAppboy"]),
+    .library(name: "UmbrellaAppsFlyer", targets: ["UmbrellaAppsFlyer"]),
+    .library(name: "UmbrellaFirebase", targets: ["UmbrellaFirebase"]),
+    .library(name: "UmbrellaFlurry", targets: ["UmbrellaFlurry"]),
+    .library(name: "UmbrellaLocalytics", targets: ["UmbrellaLocalytics"]),
+    .library(name: "UmbrellaMixpanel", targets: ["UmbrellaMixpanel"]),
+  ],
   targets: [
-    Target(name: "Umbrella"),
-    Target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaAppboy", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaAppsFlyer", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaFirebase", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
-    Target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    .target(name: "Umbrella"),
+    .target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaAppboy", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaAppsFlyer", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaFirebase", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
+    .testTarget(name: "UmbrellaAppboyTests", dependencies: ["UmbrellaAppboy"]),
+    .testTarget(name: "UmbrellaAppsFlyerTests", dependencies: ["UmbrellaAppsFlyer"]),
+    .testTarget(name: "UmbrellaFirebaseTests", dependencies: ["UmbrellaFirebase"]),
+    .testTarget(name: "UmbrellaFlurryTests", dependencies: ["UmbrellaFlurry"]),
+    .testTarget(name: "UmbrellaLocalyticsTests", dependencies: ["UmbrellaLocalytics"]),
+    .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
   ]
 )
