@@ -6,14 +6,14 @@ import Appboy_iOS_SDK
 final class AppboyProviderTests: XCTestCase {
   private enum Swizzle {
     static let UNUserNotificationCenterInitializer: Void = {
-      let oldMethod = class_getInstanceMethod(
+      guard let oldMethod = class_getInstanceMethod(
         UNUserNotificationCenter.self,
         NSSelectorFromString("initWithBundleIdentifier:")
-      )
-      let newMethod = class_getInstanceMethod(
+      ) else { return }
+      guard let newMethod = class_getInstanceMethod(
         UNUserNotificationCenter.self,
         #selector(UNUserNotificationCenter.swizzled_init(bundleIdentifier:))
-      )
+      ) else { return }
       method_exchangeImplementations(oldMethod, newMethod)
     }()
   }
@@ -35,7 +35,7 @@ final class AppboyProviderTests: XCTestCase {
 }
 
 extension UNUserNotificationCenter {
-  func swizzled_init(bundleIdentifier: String?) -> UNUserNotificationCenter {
+  @objc func swizzled_init(bundleIdentifier: String?) -> UNUserNotificationCenter {
     return self.swizzled_init(bundleIdentifier: "com.umbrella.test")
   }
 }
