@@ -5,15 +5,18 @@ import Appboy_iOS_SDK
 
 final class AppboyProviderTests: XCTestCase {
   private enum Swizzle {
+    static func swizzle(_ cls: AnyClass, _ oldSelectorName: String, _ newSelector: Selector) {
+      guard let oldMethod = class_getInstanceMethod(cls, NSSelectorFromString(oldSelectorName)) else { return }
+      guard let newMethod = class_getInstanceMethod(cls, newSelector) else { return }
+      method_exchangeImplementations(oldMethod, newMethod)
+    }
+
     static let UNUserNotificationCenterInitializer: Void = {
-      let oldMethod = class_getInstanceMethod(
-        UNUserNotificationCenter.self,
-        NSSelectorFromString("initWithBundleIdentifier:")
-      )
-      let newMethod = class_getInstanceMethod(
-        UNUserNotificationCenter.self,
-        #selector(UNUserNotificationCenter.swizzled_init(bundleIdentifier:))
-      )
+      let cls = UNUserNotificationCenter.self
+      let oldSelector = NSSelectorFromString("initWithBundleProxy:")
+      let newSelector = #selector(UNUserNotificationCenter.swizzled_init(bundleProxy:))
+      guard let oldMethod = class_getInstanceMethod(cls, oldSelector) else { return }
+      guard let newMethod = class_getInstanceMethod(cls, newSelector) else { return }
       method_exchangeImplementations(oldMethod, newMethod)
     }()
   }
@@ -35,7 +38,13 @@ final class AppboyProviderTests: XCTestCase {
 }
 
 extension UNUserNotificationCenter {
-  func swizzled_init(bundleIdentifier: String?) -> UNUserNotificationCenter {
-    return self.swizzled_init(bundleIdentifier: "com.umbrella.test")
+  @objc func swizzled_init(bundleProxy: Any?) -> UNUserNotificationCenter {
+    return self.swizzled_init(bundleProxy: TestBundle())
+  }
+}
+
+class TestBundle: Bundle {
+  @objc var un_applicationBundleIdentifier: String? {
+    return "com.umbrella.test"
   }
 }
