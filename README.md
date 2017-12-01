@@ -133,6 +133,7 @@ analytics.log(.signup(username: "devxoul"))
 
 There are several built-in providers.
 
+* AmplitudeProvider ([Amplitude-iOS](https://cocoapods.org/pods/Amplitude-iOS))
 * AnswersProvider ([Answers](https://cocoapods.org/pods/Answers))
 * AppboyProvider ([Appboy-iOS-SDK](http://cocoapods.org/pods/Appboy-iOS-SDK))
 * AppsFlyerProvider ([AppsFlyerFramework](http://cocoapods.org/pods/AppsFlyerFramework))
