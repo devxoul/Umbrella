@@ -1,4 +1,5 @@
 PODS:
+  - Amplitude-iOS (4.0.4)
   - Answers (1.3.4):
     - Fabric (~> 1.6.3)
   - Appboy-iOS-SDK (3.0.0):
@@ -35,6 +36,7 @@ PODS:
     - SDWebImage/Core
 
 DEPENDENCIES:
+  - Amplitude-iOS
   - Answers
   - Appboy-iOS-SDK
   - AppsFlyerFramework
@@ -44,6 +46,7 @@ DEPENDENCIES:
   - Mixpanel
 
 SPEC CHECKSUMS:
+  Amplitude-iOS: 2ad4d7270c99186236c1272a3a9425463b1ae1a7
   Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
   Appboy-iOS-SDK: b78abfe6915d4a62634e5e9581ce3a6fc13ef353
   AppsFlyerFramework: ece902d4233177d4e9db1429c7a5df5fad8e9f07
@@ -59,6 +62,6 @@ SPEC CHECKSUMS:
   Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: 36988e53c5e56be55a41f802ffa3c350ad504748
+PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
 
 COCOAPODS: 1.3.1

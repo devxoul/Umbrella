@@ -1,6 +1,11 @@
 use_frameworks!
 inhibit_all_warnings!
 
+target 'UmbrellaAmplitudeTests' do
+  platform :ios, '8.0'
+  pod 'Amplitude-iOS'
+end
+
 target 'UmbrellaAnswersTests' do
   platform :ios, '8.0'
   pod 'Answers'

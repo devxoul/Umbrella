@@ -6,6 +6,7 @@ let package = Package(
   name: "Umbrella",
   products: [
     .library(name: "Umbrella", targets: ["Umbrella"]),
+    .library(name: "UmbrellaAmplitude", targets: ["UmbrellaAmplitude"]),
     .library(name: "UmbrellaAnswers", targets: ["UmbrellaAnswers"]),
     .library(name: "UmbrellaAppboy", targets: ["UmbrellaAppboy"]),
     .library(name: "UmbrellaAppsFlyer", targets: ["UmbrellaAppsFlyer"]),
@@ -16,6 +17,7 @@ let package = Package(
   ],
   targets: [
     .target(name: "Umbrella"),
+    .target(name: "UmbrellaAmplitude", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAppboy", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAppsFlyer", dependencies: ["Umbrella"]),
@@ -23,6 +25,7 @@ let package = Package(
     .target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
     .testTarget(name: "UmbrellaAppboyTests", dependencies: ["UmbrellaAppboy"]),
     .testTarget(name: "UmbrellaAppsFlyerTests", dependencies: ["UmbrellaAppsFlyer"]),
