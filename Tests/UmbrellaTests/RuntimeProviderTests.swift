@@ -29,6 +29,12 @@ final class InstanceProvider: RuntimeProviderType {
   let selectorName: String = "logEvent:parameters:"
 }
 
+final class InvalidProvider: RuntimeProviderType {
+  let className: String = "UnknownClass"
+  let instanceSelectorName: String? = "shared"
+  let selectorName: String = "logEvent:parameters:"
+}
+
 final class RuntimeProviderTests: XCTestCase {
   override func setUp() {
     super.setUp()
@@ -58,5 +64,11 @@ final class RuntimeProviderTests: XCTestCase {
     XCTAssertEqual(InstanceAnalytics.shared.loggedEvents[0].name, "purchase")
     XCTAssertEqual(InstanceAnalytics.shared.loggedEvents[0].parameters!["product_id"] as! Int, 123)
     XCTAssertEqual(InstanceAnalytics.shared.loggedEvents[0].parameters!["price"] as! Double, 9.99)
+  }
+
+  func testRespondsReturnsFalseForUnknownClass() {
+    let provider = InvalidProvider()
+    XCTAssertNil(provider.cls)
+    XCTAssertFalse(provider.responds)
   }
 }
