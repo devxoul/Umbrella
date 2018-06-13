@@ -5,8 +5,8 @@ import Umbrella
 #endif
 
 open class AmplitudeProvider: RuntimeProviderType {
-  open let className: String = "Amplitude"
-  open let selectorName: String = "logEvent:withEventProperties:"
+  public let className: String = "Amplitude"
+  public let selectorName: String = "logEvent:withEventProperties:"
 
   public init() {
   }

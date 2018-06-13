@@ -5,9 +5,9 @@ import Umbrella
 #endif
 
 open class AppboyProvider: RuntimeProviderType {
-  open let className: String = "Appboy"
-  open let instanceSelectorName: String? = "sharedInstance"
-  open let selectorName: String = "logCustomEvent:withProperties:"
+  public let className: String = "Appboy"
+  public let instanceSelectorName: String? = "sharedInstance"
+  public let selectorName: String = "logCustomEvent:withProperties:"
 
   public init() {
   }

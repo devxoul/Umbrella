@@ -5,8 +5,8 @@ import Umbrella
 #endif
 
 open class FirebaseProvider: RuntimeProviderType {
-  open let className: String = "FIRAnalytics"
-  open let selectorName: String = "logEventWithName:parameters:"
+  public let className: String = "FIRAnalytics"
+  public let selectorName: String = "logEventWithName:parameters:"
 
   public init() {
   }

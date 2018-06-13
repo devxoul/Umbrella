@@ -5,9 +5,9 @@ import Umbrella
 #endif
 
 open class MixpanelProvider: RuntimeProviderType {
-  open let className: String = "Mixpanel"
-  open let instanceSelectorName: String? = "sharedInstance"
-  open let selectorName: String = "track:properties:"
+  public let className: String = "Mixpanel"
+  public let instanceSelectorName: String? = "sharedInstance"
+  public let selectorName: String = "track:properties:"
 
   public init() {
   }

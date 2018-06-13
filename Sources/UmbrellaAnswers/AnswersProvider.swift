@@ -5,8 +5,8 @@ import Umbrella
 #endif
 
 open class AnswersProvider: RuntimeProviderType {
-  open let className: String = "Answers"
-  open let selectorName: String = "logCustomEventWithName:customAttributes:"
+  public let className: String = "Answers"
+  public let selectorName: String = "logCustomEventWithName:customAttributes:"
 
   public init() {
   }

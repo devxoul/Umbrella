@@ -5,9 +5,9 @@ import Umbrella
 #endif
 
 open class AppsFlyerProvider: RuntimeProviderType {
-  open let className: String = "AppsFlyerTracker"
-  open let instanceSelectorName: String? = "sharedTracker"
-  open let selectorName: String = "trackEvent:withValues:"
+  public let className: String = "AppsFlyerTracker"
+  public let instanceSelectorName: String? = "sharedTracker"
+  public let selectorName: String = "trackEvent:withValues:"
 
   public init() {
   }

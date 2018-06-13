@@ -5,8 +5,8 @@ import Umbrella
 #endif
 
 open class LocalyticsProvider: RuntimeProviderType {
-  open let className: String = "Localytics"
-  open let selectorName: String = "tagEvent:attributes:"
+  public let className: String = "Localytics"
+  public let selectorName: String = "tagEvent:attributes:"
 
   public init() {
   }
