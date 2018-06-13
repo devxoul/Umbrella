@@ -19,6 +19,8 @@ Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moy
     * [Creating Custom Providers](#creating-custom-providers)
 * [Installation](#installation)
 * [Contributing](#contributing)
+    * [Generating Xcode Workspace](#generating-xcode-workspace)
+    * [Creating New Provider](#creating-new-provider)
 * [License](#license)
 
 ## Why?
@@ -170,13 +172,107 @@ pod 'Umbrella/...'
 
 Any discussions and pull requests are welcomed 💖
 
-To create a Xcode workspace:
+### Generating Xcode Workspace
 
 ```bash
 $ make project
 ```
 
-This will automatically create **`Umbrella.xcworkspace`** and perform `pod install`.
+This will automatically generate **`Umbrella.xcworkspace`** and perform `pod install`.
+
+### Creating New Provider
+
+For example, imagine that we are going to create a new provider for an analytics service 'Raincoat'.
+
+1. Add a library and a target definition in **`Package.swift`**.
+
+    ```diff
+      let package = Package(
+        name: "Umbrella",
+        products: [
+          .library(name: "Umbrella", targets: ["Umbrella"]),
+          .library(name: "UmbrellaFirebase", targets: ["UmbrellaFirebase"]),
+          .library(name: "UmbrellaMixpanel", targets: ["UmbrellaMixpanel"]),
+    +     .library(name: "UmbrellaRaincoat", targets: ["UmbrellaRaincoat"]),
+        ],
+        targets: [
+          .target(name: "Umbrella"),
+          .target(name: "UmbrellaFirebase", dependencies: ["Umbrella"]),
+          .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    +     .target(name: "UmbrellaRaincoat", dependencies: ["Umbrella"]),
+          .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
+          .testTarget(name: "UmbrellaFirebaseTests", dependencies: ["UmbrellaFirebase"]),
+          .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
+    +     .testTarget(name: "UmbrellaRaincoat", dependencies: ["UmbrellaRaincoat"]),
+        ]
+      )
+    ```
+
+2. Add a source file and a test file.
+
+    ```diff
+      ...
+      ├── Sources
+      │   ├── UmbrellaFirebase
+      │   │   └── FirebaseProvider.swift
+      │   ├── UmbrellaMixpanel
+      │   │   └── MixpanelProvider.swift
+    + │   ├── UmbrellaRaincoat
+    + │   │   └── RaincoatProvider.swift
+      |   ...
+      ├── Tests
+      │   ├── UmbrellaFirebaseTests
+      │   │   └── FirebaseProviderTests.swift
+      │   ├── UmbrellaMixpanelTests
+      │   │   └── MixpanelProviderTests.swift
+    + │   ├── UmbrellaRaincoatTests
+    + │   │   └── RaincoatProviderTests.swift
+      ... ...
+    ```
+
+3. Add a CocoaPods dependency in **`Podfile`**.
+
+    ```diff
+     target 'UmbrellaFirebaseTests' do
+       platform :ios, '8.0'
+       pod 'Firebase/Analytics'
+     end
+
+     target 'UmbrellaMixpanelTests' do
+       platform :ios, '8.0'
+       pod 'Mixpanel'
+     end
+
+    + target 'UmbrellaRaincoatTests' do
+    +   platform :ios, '8.0'
+    +   pod 'Raincoat'
+    + end
+    ```
+
+4. Add a CocoaPods subspec in **`Umbrella.podspec`**.
+
+    ```diff
+      s.subspec "Firebase" do |ss|
+        ss.source_files = "Sources/UmbrellaFirebase/*.swift"
+        ss.dependency "Umbrella/Core"
+      end
+
+      s.subspec "Mixpanel" do |ss|
+        ss.source_files = "Sources/UmbrellaMixpanel/*.swift"
+        ss.dependency "Umbrella/Core"
+      end
+
+    + s.subspec "Raincoat" do |ss|
+    +   ss.source_files = "Sources/UmbrellaRaincoat/*.swift"
+    +   ss.dependency "Umbrella/Core"
+    + end
+    ```
+
+5. Create a Xcode workspace and run tests. Don't forget to check the code coverage to ensure that tests can cover the new provider.
+
+    ```console
+    $ make project
+    ```
 
 ## License
 
