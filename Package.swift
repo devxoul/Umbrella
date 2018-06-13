@@ -25,6 +25,7 @@ let package = Package(
     .target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
     .testTarget(name: "UmbrellaAppboyTests", dependencies: ["UmbrellaAppboy"]),
