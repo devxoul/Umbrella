@@ -4,7 +4,7 @@ import Umbrella
 final class ClassAnalytics: NSObject {
   static var loggedEvents: [(name: String, parameters: [String: Any]?)] = []
 
-  class func logEvent(_ eventName: String, parameters: [String: Any]?) {
+  @objc class func logEvent(_ eventName: String, parameters: [String: Any]?) {
     self.loggedEvents.append((name: eventName, parameters: parameters))
   }
 }
@@ -14,8 +14,8 @@ final class ClassProvider: RuntimeProviderType {
   let selectorName: String = "logEvent:parameters:"
 }
 
-final class InstanceAnalytics: NSObject {
-  static let shared = InstanceAnalytics()
+@objc final class InstanceAnalytics: NSObject {
+  @objc static let shared = InstanceAnalytics()
   var loggedEvents: [(name: String, parameters: [String: Any]?)] = []
 
   @objc func logEvent(_ eventName: String, parameters: [String: Any]?) {
