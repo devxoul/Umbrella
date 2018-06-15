@@ -18,7 +18,6 @@ install:
 
 before_script:
   - set -o pipefail
-  - bundle exec pod repo update
   - make project
 
 script:
