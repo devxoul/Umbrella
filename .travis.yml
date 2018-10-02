@@ -29,7 +29,7 @@ script:
     -configuration Debug
     -enableCodeCoverage YES
     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-  - pod lib lint --allow-warnings
+  - pod lib lint --allow-warnings --use-libraries
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Umbrella' -X xcodeplist
