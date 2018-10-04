@@ -40,3 +40,8 @@ target 'UmbrellaMixpanelTests' do
   platform :ios, '8.0'
   pod 'Mixpanel'
 end
+
+target 'UmbrellaAppMetricaTests' do
+    platform :ios, '8.0'
+    pod 'YandexMobileMetrica/Dynamic'
+end
