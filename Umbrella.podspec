@@ -57,4 +57,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaMixpanel/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "AppMetrica" do |ss|
+    ss.source_files = "Sources/UmbrellaAppMetrica/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end

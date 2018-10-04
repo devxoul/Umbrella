@@ -34,6 +34,7 @@ PODS:
   - SDWebImage/GIF (4.1.0):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - YandexMobileMetrica/Dynamic (3.3.0)
 
 DEPENDENCIES:
   - Amplitude-iOS
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - Flurry-iOS-SDK/FlurrySDK
   - Localytics
   - Mixpanel
+  - YandexMobileMetrica/Dynamic
 
 SPEC CHECKSUMS:
   Amplitude-iOS: 2ad4d7270c99186236c1272a3a9425463b1ae1a7
@@ -61,7 +63,8 @@ SPEC CHECKSUMS:
   Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
   Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  YandexMobileMetrica: 415e4e8a7a23121a3d086958a655f444dd340edb
 
-PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
+PODFILE CHECKSUM: 7818aab0d6014c00055ea4bd02385e4edb08e545
 
 COCOAPODS: 1.3.1
