@@ -1,37 +1,86 @@
 PODS:
-  - Amplitude-iOS (4.0.4)
-  - Answers (1.3.4):
-    - Fabric (~> 1.6.3)
-  - Appboy-iOS-SDK (3.0.0):
-    - Appboy-iOS-SDK/UI (= 3.0.0)
-  - Appboy-iOS-SDK/Core (3.0.0)
-  - Appboy-iOS-SDK/UI (3.0.0):
+  - Amplitude-iOS (4.3.1)
+  - Answers (1.3.7):
+    - Fabric (~> 1.7.7)
+  - Appboy-iOS-SDK (3.9.0):
+    - Appboy-iOS-SDK/UI (= 3.9.0)
+  - Appboy-iOS-SDK/ContentCards (3.9.0):
     - Appboy-iOS-SDK/Core
     - SDWebImage/GIF (~> 4.0)
-  - AppsFlyerFramework (4.7.11)
-  - Fabric (1.6.11)
-  - Firebase/Analytics (4.0.2):
+  - Appboy-iOS-SDK/Core (3.9.0)
+  - Appboy-iOS-SDK/Feedback (3.9.0):
+    - Appboy-iOS-SDK/Core
+  - Appboy-iOS-SDK/InAppMessage (3.9.0):
+    - Appboy-iOS-SDK/Core
+    - SDWebImage/GIF (~> 4.0)
+  - Appboy-iOS-SDK/NewsFeed (3.9.0):
+    - Appboy-iOS-SDK/Core
+    - SDWebImage/GIF (~> 4.0)
+  - Appboy-iOS-SDK/UI (3.9.0):
+    - Appboy-iOS-SDK/ContentCards
+    - Appboy-iOS-SDK/Core
+    - Appboy-iOS-SDK/Feedback
+    - Appboy-iOS-SDK/InAppMessage
+    - Appboy-iOS-SDK/NewsFeed
+  - AppsFlyerFramework (4.8.9)
+  - Fabric (1.7.12)
+  - Firebase/Analytics (5.9.0):
     - Firebase/Core
-  - Firebase/Core (4.0.2):
-    - FirebaseAnalytics (= 4.0.1)
-    - FirebaseCore (= 4.0.2)
-  - FirebaseAnalytics (4.0.1):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (4.0.2):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseInstanceID (2.0.0):
-    - FirebaseCore (~> 4.0)
+  - Firebase/Core (5.9.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.2.0)
+  - Firebase/CoreOnly (5.9.0):
+    - FirebaseCore (= 5.1.4)
+  - FirebaseAnalytics (5.2.0):
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.2)
+    - GoogleAppMeasurement (~> 5.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.1.4):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.2.2):
+    - FirebaseCore (~> 5.1)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
   - FLAnimatedImage (1.0.12)
-  - Flurry-iOS-SDK/FlurrySDK (8.1.0)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - Localytics (4.4.1)
-  - Mixpanel (3.1.5)
-  - SDWebImage/Core (4.1.0)
-  - SDWebImage/GIF (4.1.0):
+  - Flurry-iOS-SDK/FlurrySDK (9.2.0)
+  - GoogleAppMeasurement (5.2.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.3.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.0)
+  - GoogleUtilities/Logger (5.3.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.0)"
+  - GoogleUtilities/Reachability (5.3.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.0):
+    - GoogleUtilities/Logger
+  - Localytics (5.3.0)
+  - Mixpanel (3.3.3)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
 
@@ -45,23 +94,45 @@ DEPENDENCIES:
   - Localytics
   - Mixpanel
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Amplitude-iOS
+    - Answers
+    - Appboy-iOS-SDK
+    - AppsFlyerFramework
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FLAnimatedImage
+    - Flurry-iOS-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - Localytics
+    - Mixpanel
+    - nanopb
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  Amplitude-iOS: 2ad4d7270c99186236c1272a3a9425463b1ae1a7
-  Answers: 6a4d22973d8550808630a55f526055c9eb6d39a2
-  Appboy-iOS-SDK: b78abfe6915d4a62634e5e9581ce3a6fc13ef353
-  AppsFlyerFramework: ece902d4233177d4e9db1429c7a5df5fad8e9f07
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
-  Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
-  FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
-  FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
-  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
+  Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
+  Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
+  AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
+  Fabric: d7387db9a31aadff63b147a4b91d982c53afaa4f
+  Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
+  FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
+  FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
+  FirebaseInstanceID: 78ba376fcd5b94c001f9999b2cbd3d1f1e56e78d
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  Flurry-iOS-SDK: 51065be4436f3e21fc8d3d7bb0b7d6869df6333d
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  Localytics: f9673b7170c4744173b7154ee9a96a942a3da890
-  Mixpanel: 9b33e5de998cd42597767f67e2b8fcd1d158c71d
-  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  Flurry-iOS-SDK: e5d6ff8cb79b5044710a0c7ae41b12ac651f4315
+  GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
+  GoogleUtilities: 760ccb53b7c7f40f9c02d8c241f76f841a7a6162
+  Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
+  Mixpanel: 3c3925c27f7a321d5978319a72f53f8f0885afc5
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
 PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
