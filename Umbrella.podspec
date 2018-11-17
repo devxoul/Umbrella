@@ -57,4 +57,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaMixpanel/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "Intercom" do |ss|
+    ss.source_files = "Sources/UmbrellaIntercom/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end
