@@ -23,7 +23,28 @@ PODS:
     - Appboy-iOS-SDK/InAppMessage
     - Appboy-iOS-SDK/NewsFeed
   - AppsFlyerFramework (4.8.9)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - Fabric (1.7.12)
+  - FacebookSDK (4.38.0):
+    - Bolts (~> 1.9)
+    - FacebookSDK/CoreKit (= 4.38.0)
+    - FacebookSDK/MarketingKit (= 4.38.0)
+  - FacebookSDK/CoreKit (4.38.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit
+  - FacebookSDK/MarketingKit (4.38.0):
+    - Bolts (~> 1.9)
+    - FacebookSDK/CoreKit
+    - FBSDKMarketingKit
+  - FBSDKCoreKit (4.38.1):
+    - Bolts (~> 1.9)
+  - FBSDKMarketingKit (4.38.0):
+    - FBSDKCoreKit
   - Firebase/Analytics (5.9.0):
     - Firebase/Core
   - Firebase/Core (5.9.0):
@@ -89,6 +110,7 @@ DEPENDENCIES:
   - Answers
   - Appboy-iOS-SDK
   - AppsFlyerFramework
+  - FacebookSDK
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
   - Localytics
@@ -100,7 +122,11 @@ SPEC REPOS:
     - Answers
     - Appboy-iOS-SDK
     - AppsFlyerFramework
+    - Bolts
     - Fabric
+    - FacebookSDK
+    - FBSDKCoreKit
+    - FBSDKMarketingKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -119,7 +145,11 @@ SPEC CHECKSUMS:
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
   AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Fabric: d7387db9a31aadff63b147a4b91d982c53afaa4f
+  FacebookSDK: 73f54b8b94e09b05647cdef0af147f470cd3edc6
+  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
+  FBSDKMarketingKit: e609f39d74ab273cf52e2f8b7e8829ed412b2827
   Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
   FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
@@ -133,6 +163,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
+PODFILE CHECKSUM: 3a6bfed87c56cfc95bd08d74892e8b6b468388cf
 
 COCOAPODS: 1.5.3
