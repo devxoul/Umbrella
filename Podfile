@@ -40,3 +40,8 @@ target 'UmbrellaMixpanelTests' do
   platform :ios, '8.0'
   pod 'Mixpanel'
 end
+
+target 'UmbrellaSegmentTests' do
+  platform :ios, '8.0'
+  pod 'Analytics'
+end
