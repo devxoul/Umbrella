@@ -7,6 +7,8 @@ Pod::Spec.new do |s|
   s.author           = { "Suyeol Jeon" => "devxoul@gmail.com" }
   s.source           = { :git => "https://github.com/devxoul/Umbrella.git",
                          :tag => s.version.to_s }
+  s.swift_version    = "5.0"
+
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.11"
   s.tvos.deployment_target = "9.0"
