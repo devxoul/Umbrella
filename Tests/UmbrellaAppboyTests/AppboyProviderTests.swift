@@ -12,6 +12,7 @@ final class AppboyProviderTests: XCTestCase {
     }
 
     static let UNUserNotificationCenterInitializer: Void = {
+      guard #available(iOS 10.0, *) else { return }
       let cls = UNUserNotificationCenter.self
       let oldSelector = NSSelectorFromString("initWithBundleProxy:")
       let newSelector = #selector(UNUserNotificationCenter.swizzled_init(bundleProxy:))
@@ -37,6 +38,7 @@ final class AppboyProviderTests: XCTestCase {
   }
 }
 
+@available(iOS 10.0, *)
 extension UNUserNotificationCenter {
   @objc func swizzled_init(bundleProxy: Any?) -> UNUserNotificationCenter {
     return self.swizzled_init(bundleProxy: TestBundle())
