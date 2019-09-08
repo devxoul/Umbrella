@@ -35,7 +35,7 @@ public extension RuntimeProviderType {
     }
   }
 
-  func log(_ eventName: String, parameters: [String: Any]?) {
+  func log(_ eventName: String, parameters: [String: PrimitiveType]?) {
     guard self.responds else { return }
     if let instance = self.instance {
       _ = instance.perform(self.selector, with: eventName, with: parameters)

@@ -1,4 +1,5 @@
 import Umbrella
+import Foundation
 
 enum TestEvent: EventType {
   case login(username: String)
@@ -24,7 +25,7 @@ enum TestEvent: EventType {
     }
   }
 
-  func parameters(for provider: ProviderType) -> [String : Any]? {
+  func parameters(for provider: ProviderType) -> [String: PrimitiveType]? {
     switch self {
     case let .login(username):
       switch provider {
@@ -46,9 +47,9 @@ enum TestEvent: EventType {
 }
 
 class MockProvider: ProviderType {
-  var events: [(name: String, parameters: [String: Any]?)] = []
+  var events: [(name: String, parameters: [String: PrimitiveType]?)] = []
 
-  func log(_ eventName: String, parameters: [String: Any]?) {
+  func log(_ eventName: String, parameters: [String: PrimitiveType]?) {
     self.events.append((name: eventName, parameters: parameters))
   }
 }
