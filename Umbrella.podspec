@@ -20,6 +20,11 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/Umbrella/*.swift"
   end
 
+  s.subspec "ACPCore" do |ss|
+    ss.source_files = "Sources/UmbrellaACPCore/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
+
   s.subspec "Amplitude" do |ss|
     ss.source_files = "Sources/UmbrellaAmplitude/*.swift"
     ss.dependency "Umbrella/Core"

@@ -1,4 +1,12 @@
 PODS:
+  - ACPCore (2.3.4):
+    - ACPCore/iOS (= 2.3.4)
+  - ACPCore/iOS (2.3.4)
+  - ACPUserProfile (2.0.1):
+    - ACPCore (~> 2.0)
+    - ACPUserProfile/iOS (= 2.0.1)
+  - ACPUserProfile/iOS (2.0.1):
+    - ACPCore (~> 2.0)
   - Amplitude-iOS (4.3.1)
   - Answers (1.3.7):
     - Fabric (~> 1.7.7)
@@ -85,6 +93,8 @@ PODS:
     - SDWebImage/Core
 
 DEPENDENCIES:
+  - ACPCore (~> 2.0)
+  - ACPUserProfile (~> 2.0)
   - Amplitude-iOS
   - Answers
   - Appboy-iOS-SDK
@@ -96,6 +106,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ACPCore
+    - ACPUserProfile
     - Amplitude-iOS
     - Answers
     - Appboy-iOS-SDK
@@ -115,6 +127,8 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
+  ACPCore: 5f2ee780930ea07133fe3f2201a5f870c861663e
+  ACPUserProfile: d5141c8f5154e10e3a08124649ddaae13efd5131
   Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
@@ -133,6 +147,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
+PODFILE CHECKSUM: 41ee0806533184532cd7fd3f98e8c23bb2d835eb
 
 COCOAPODS: 1.6.1

@@ -1,6 +1,12 @@
 use_frameworks!
 inhibit_all_warnings!
 
+target 'UmbrellaACPCoreTests' do
+  platform :ios, '10.1'
+  pod 'ACPUserProfile', '~> 2.0'
+  pod 'ACPCore', '~> 2.0'
+end
+
 target 'UmbrellaAmplitudeTests' do
   platform :ios, '8.0'
   pod 'Amplitude-iOS'

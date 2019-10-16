@@ -9,6 +9,7 @@ let package = Package(
   ],
   products: [
     .library(name: "Umbrella", targets: ["Umbrella"]),
+    .library(name: "UmbrellaACPCore", targets: ["UmbrellaACPCore"]),
     .library(name: "UmbrellaAmplitude", targets: ["UmbrellaAmplitude"]),
     .library(name: "UmbrellaAnswers", targets: ["UmbrellaAnswers"]),
     .library(name: "UmbrellaAppboy", targets: ["UmbrellaAppboy"]),
@@ -20,6 +21,7 @@ let package = Package(
   ],
   targets: [
     .target(name: "Umbrella"),
+    .target(name: "UmbrellaACPCore", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAmplitude", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAnswers", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaAppboy", dependencies: ["Umbrella"]),
@@ -29,6 +31,7 @@ let package = Package(
     .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
+    .testTarget(name: "UmbrellaACPCoreTests", dependencies: ["UmbrellaACPCore"]),
     .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
     .testTarget(name: "UmbrellaAppboyTests", dependencies: ["UmbrellaAppboy"]),
