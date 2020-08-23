@@ -95,7 +95,7 @@ DEPENDENCIES:
   - Mixpanel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Amplitude-iOS
     - Answers
     - Appboy-iOS-SDK
@@ -135,4 +135,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3
