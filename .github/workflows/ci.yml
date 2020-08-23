@@ -9,6 +9,11 @@ on:
 jobs:
   test:
     runs-on: macOS-latest
+    env:
+      WORKSPACE: Umbrella.xcworkspace
+      SCHEME: Umbrella-Package
+      SDK: iphonesimulator
+      DESTINATION: platform=iOS Simulator,name=iPhone 11 Pro,OS=latest
 
     steps:
     - uses: actions/checkout@v1
@@ -26,11 +31,6 @@ jobs:
           -configuration Debug \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
-      env:
-        WORKSPACE: Umbrella.xcworkspace
-        SCHEME: Umbrella-Package
-        SDK: iphonesimulator12.2
-        DESTINATION: platform=iOS Simulator,name=iPhone XS,OS=12.2
 
     - name: Lint Podspec
       run: pod lib lint --allow-warnings --use-libraries
