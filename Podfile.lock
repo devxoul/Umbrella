@@ -1,5 +1,6 @@
 PODS:
   - Amplitude-iOS (4.3.1)
+  - Analytics (3.6.10)
   - Answers (1.3.7):
     - Fabric (~> 1.7.7)
   - Appboy-iOS-SDK (3.9.0):
@@ -108,6 +109,7 @@ PODS:
 
 DEPENDENCIES:
   - Amplitude-iOS
+  - Analytics
   - Answers
   - Appboy-iOS-SDK
   - AppsFlyerFramework
@@ -121,6 +123,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Amplitude-iOS
+    - Analytics
     - Answers
     - Appboy-iOS-SDK
     - AppsFlyerFramework
@@ -145,6 +148,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
+  Analytics: 63744ad4afa65c3bcdcdb7a94b62515bde5b3900
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
   AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
@@ -167,6 +171,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 3a6bfed87c56cfc95bd08d74892e8b6b468388cf
+PODFILE CHECKSUM: 6e7b4eb38c8c3c5d712a820ec10cc2f0b07d64d1
 
 COCOAPODS: 1.9.3
