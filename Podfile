@@ -41,6 +41,11 @@ target 'UmbrellaMixpanelTests' do
   pod 'Mixpanel'
 end
 
+target 'UmbrellaFacebookTests' do
+  platform :ios, '8.0'
+  pod 'FacebookSDK'
+end
+
 target 'UmbrellaIntercomTests' do
   platform :ios, '8.0'
   pod 'Intercom'
