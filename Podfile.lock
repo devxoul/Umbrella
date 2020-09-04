@@ -93,6 +93,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.0):
     - GoogleUtilities/Logger
+  - Intercom (5.1.9)
   - Localytics (5.3.0)
   - Mixpanel (3.3.3)
   - nanopb (0.3.8):
@@ -113,11 +114,12 @@ DEPENDENCIES:
   - FacebookSDK
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
+  - Intercom
   - Localytics
   - Mixpanel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Amplitude-iOS
     - Answers
     - Appboy-iOS-SDK
@@ -135,6 +137,7 @@ SPEC REPOS:
     - Flurry-iOS-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
+    - Intercom
     - Localytics
     - Mixpanel
     - nanopb
@@ -158,6 +161,7 @@ SPEC CHECKSUMS:
   Flurry-iOS-SDK: e5d6ff8cb79b5044710a0c7ae41b12ac651f4315
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 760ccb53b7c7f40f9c02d8c241f76f841a7a6162
+  Intercom: ab60831c72fe5ff3edfa2d3a2352d06435a85478
   Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
   Mixpanel: 3c3925c27f7a321d5978319a72f53f8f0885afc5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -165,4 +169,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3a6bfed87c56cfc95bd08d74892e8b6b468388cf
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

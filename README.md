@@ -1,8 +1,8 @@
 # ☂️ Umbrella
 
-![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
 [![CocoaPods](http://img.shields.io/cocoapods/v/Umbrella.svg)](https://cocoapods.org/pods/Umbrella)
-[![Build Status](https://travis-ci.org/devxoul/Umbrella.svg?branch=master)](https://travis-ci.org/devxoul/Umbrella)
+[![CI](https://github.com/devxoul/Umbrella/workflows/CI/badge.svg)](https://github.com/devxoul/Umbrella/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/devxoul/Umbrella.svg)](https://codecov.io/gh/devxoul/Umbrella)
 
 Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moya/Moya).
@@ -143,6 +143,7 @@ There are several built-in providers.
 * FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
 * LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))
 * MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
+* IntercomProvider ([Intercom](https://cocoapods.org/pods/Intercom))
 
 If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
 
