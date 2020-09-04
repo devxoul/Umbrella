@@ -40,6 +40,11 @@ Pod::Spec.new do |s|
     ss.dependency "Umbrella/Core"
   end
 
+  s.subspec "Facebook" do |ss|
+    ss.source_files = "Sources/UmbrellaFacebook/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
+
   s.subspec "Firebase" do |ss|
     ss.source_files = "Sources/UmbrellaFirebase/*.swift"
     ss.dependency "Umbrella/Core"
@@ -47,6 +52,11 @@ Pod::Spec.new do |s|
 
   s.subspec "Flurry" do |ss|
     ss.source_files = "Sources/UmbrellaFlurry/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
+
+  s.subspec "Intercom" do |ss|
+    ss.source_files = "Sources/UmbrellaIntercom/*.swift"
     ss.dependency "Umbrella/Core"
   end
 
@@ -62,16 +72,6 @@ Pod::Spec.new do |s|
 
   s.subspec "Segment" do |ss|
     ss.source_files = "Sources/UmbrellaSegment/*.swift"
-    ss.dependency "Umbrella/Core"
-  end
-
-  s.subspec "Facebook" do |ss|
-    ss.source_files = "Sources/UmbrellaFacebook/*.swift"
-    ss.dependency "Umbrella/Core"
-  end
-
-  s.subspec "Intercom" do |ss|
-    ss.source_files = "Sources/UmbrellaIntercom/*.swift"
     ss.dependency "Umbrella/Core"
   end
 end

@@ -139,11 +139,13 @@ There are several built-in providers.
 * AnswersProvider ([Answers](https://cocoapods.org/pods/Answers))
 * AppboyProvider ([Appboy-iOS-SDK](http://cocoapods.org/pods/Appboy-iOS-SDK))
 * AppsFlyerProvider ([AppsFlyerFramework](http://cocoapods.org/pods/AppsFlyerFramework))
+* FacebookProvider ([FBSDKCoreKit](https://cocoapods.org/pods/FBSDKCoreKit))
 * FirebaseProvider ([Firebase/Analytics](https://cocoapods.org/pods/Firebase))
 * FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
+* IntercomProvider ([Intercom](https://cocoapods.org/pods/Intercom))
 * LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))
 * MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
-* IntercomProvider ([Intercom](https://cocoapods.org/pods/Intercom))
+* SegmentProvider ([Analytics](https://cocoapods.org/pods/Analytics))
 
 If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
 

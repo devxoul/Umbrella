@@ -21,6 +21,11 @@ target 'UmbrellaAppsFlyerTests' do
   pod 'AppsFlyerFramework'
 end
 
+target 'UmbrellaFacebookTests' do
+  platform :ios, '8.0'
+  pod 'FacebookSDK'
+end
+
 target 'UmbrellaFirebaseTests' do
   platform :ios, '8.0'
   pod 'Firebase/Analytics'
@@ -29,6 +34,11 @@ end
 target 'UmbrellaFlurryTests' do
   platform :ios, '8.0'
   pod 'Flurry-iOS-SDK/FlurrySDK'
+end
+
+target 'UmbrellaIntercomTests' do
+  platform :ios, '8.0'
+  pod 'Intercom'
 end
 
 target 'UmbrellaLocalyticsTests' do
@@ -44,14 +54,4 @@ end
 target 'UmbrellaSegmentTests' do
   platform :ios, '8.0'
   pod 'Analytics'
-end
-
-target 'UmbrellaFacebookTests' do
-  platform :ios, '8.0'
-  pod 'FacebookSDK'
-end
-
-target 'UmbrellaIntercomTests' do
-  platform :ios, '8.0'
-  pod 'Intercom'
 end
