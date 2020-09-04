@@ -1,8 +1,8 @@
 # ☂️ Umbrella
 
-![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
 [![CocoaPods](http://img.shields.io/cocoapods/v/Umbrella.svg)](https://cocoapods.org/pods/Umbrella)
-[![Build Status](https://travis-ci.org/devxoul/Umbrella.svg?branch=master)](https://travis-ci.org/devxoul/Umbrella)
+[![CI](https://github.com/devxoul/Umbrella/workflows/CI/badge.svg)](https://github.com/devxoul/Umbrella/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/devxoul/Umbrella.svg)](https://codecov.io/gh/devxoul/Umbrella)
 
 Analytics abstraction layer for Swift. Inspired by [Moya](https://github.com/Moya/Moya).

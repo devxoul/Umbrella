@@ -1,9 +1,12 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
   name: "Umbrella",
+  platforms: [
+    .macOS(.v10_11), .iOS(.v8), .tvOS(.v9), .watchOS(.v2)
+  ],
   products: [
     .library(name: "Umbrella", targets: ["Umbrella"]),
     .library(name: "UmbrellaAmplitude", targets: ["UmbrellaAmplitude"]),
@@ -37,5 +40,6 @@ let package = Package(
     .testTarget(name: "UmbrellaLocalyticsTests", dependencies: ["UmbrellaLocalytics"]),
     .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
     .testTarget(name: "UmbrellaIntercomTests", dependencies: ["UmbrellaIntercom"]),
-  ]
+  ],
+  swiftLanguageVersions: [.v5]
 )
