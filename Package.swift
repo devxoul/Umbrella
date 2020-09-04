@@ -17,6 +17,7 @@ let package = Package(
     .library(name: "UmbrellaFlurry", targets: ["UmbrellaFlurry"]),
     .library(name: "UmbrellaLocalytics", targets: ["UmbrellaLocalytics"]),
     .library(name: "UmbrellaMixpanel", targets: ["UmbrellaMixpanel"]),
+    .library(name: "UmbrellaIntercom", targets: ["UmbrellaIntercom"]),
   ],
   targets: [
     .target(name: "Umbrella"),
@@ -28,6 +29,7 @@ let package = Package(
     .target(name: "UmbrellaFlurry", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaIntercom", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
@@ -37,6 +39,7 @@ let package = Package(
     .testTarget(name: "UmbrellaFlurryTests", dependencies: ["UmbrellaFlurry"]),
     .testTarget(name: "UmbrellaLocalyticsTests", dependencies: ["UmbrellaLocalytics"]),
     .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
+    .testTarget(name: "UmbrellaIntercomTests", dependencies: ["UmbrellaIntercom"]),
   ],
   swiftLanguageVersions: [.v5]
 )

@@ -143,6 +143,7 @@ There are several built-in providers.
 * FlurryProvider ([Flurry-iOS-SDK/FabricSDK](https://cocoapods.org/pods/Flurry-iOS-SDK))
 * LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))
 * MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
+* IntercomProvider ([Intercom](https://cocoapods.org/pods/Intercom))
 
 If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
 
