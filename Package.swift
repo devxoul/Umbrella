@@ -1,9 +1,12 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
   name: "Umbrella",
+  platforms: [
+    .macOS(.v10_11), .iOS(.v8), .tvOS(.v9), .watchOS(.v2)
+  ],
   products: [
     .library(name: "Umbrella", targets: ["Umbrella"]),
     .library(name: "UmbrellaAmplitude", targets: ["UmbrellaAmplitude"]),
@@ -15,6 +18,8 @@ let package = Package(
     .library(name: "UmbrellaLocalytics", targets: ["UmbrellaLocalytics"]),
     .library(name: "UmbrellaMixpanel", targets: ["UmbrellaMixpanel"]),
     .library(name: "UmbrellaSegment", targets: ["UmbrellaSegment"]),
+    .library(name: "UmbrellaFacebook", targets: ["UmbrellaFacebook"]),
+    .library(name: "UmbrellaIntercom", targets: ["UmbrellaIntercom"]),
   ],
   targets: [
     .target(name: "Umbrella"),
@@ -27,6 +32,8 @@ let package = Package(
     .target(name: "UmbrellaLocalytics", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaMixpanel", dependencies: ["Umbrella"]),
     .target(name: "UmbrellaSegment", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaFacebook", dependencies: ["Umbrella"]),
+    .target(name: "UmbrellaIntercom", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaTests", dependencies: ["Umbrella"]),
     .testTarget(name: "UmbrellaAmplitudeTests", dependencies: ["UmbrellaAmplitude"]),
     .testTarget(name: "UmbrellaAnswersTests", dependencies: ["UmbrellaAnswers"]),
@@ -37,5 +44,8 @@ let package = Package(
     .testTarget(name: "UmbrellaLocalyticsTests", dependencies: ["UmbrellaLocalytics"]),
     .testTarget(name: "UmbrellaMixpanelTests", dependencies: ["UmbrellaMixpanel"]),
     .testTarget(name: "UmbrellaSegmentTests", dependencies: ["UmbrellaSegment"]),
-  ]
+    .testTarget(name: "UmbrellaFacebookTests", dependencies: ["UmbrellaFacebook"]),
+    .testTarget(name: "UmbrellaIntercomTests", dependencies: ["UmbrellaIntercom"]),
+  ],
+  swiftLanguageVersions: [.v5]
 )

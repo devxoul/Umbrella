@@ -24,7 +24,28 @@ PODS:
     - Appboy-iOS-SDK/InAppMessage
     - Appboy-iOS-SDK/NewsFeed
   - AppsFlyerFramework (4.8.9)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - Fabric (1.7.12)
+  - FacebookSDK (4.38.0):
+    - Bolts (~> 1.9)
+    - FacebookSDK/CoreKit (= 4.38.0)
+    - FacebookSDK/MarketingKit (= 4.38.0)
+  - FacebookSDK/CoreKit (4.38.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit
+  - FacebookSDK/MarketingKit (4.38.0):
+    - Bolts (~> 1.9)
+    - FacebookSDK/CoreKit
+    - FBSDKMarketingKit
+  - FBSDKCoreKit (4.38.1):
+    - Bolts (~> 1.9)
+  - FBSDKMarketingKit (4.38.0):
+    - FBSDKCoreKit
   - Firebase/Analytics (5.9.0):
     - Firebase/Core
   - Firebase/Core (5.9.0):
@@ -73,6 +94,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.0):
     - GoogleUtilities/Logger
+  - Intercom (5.1.9)
   - Localytics (5.3.0)
   - Mixpanel (3.3.3)
   - nanopb (0.3.8):
@@ -91,19 +113,25 @@ DEPENDENCIES:
   - Answers
   - Appboy-iOS-SDK
   - AppsFlyerFramework
+  - FacebookSDK
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
+  - Intercom
   - Localytics
   - Mixpanel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Amplitude-iOS
     - Analytics
     - Answers
     - Appboy-iOS-SDK
     - AppsFlyerFramework
+    - Bolts
     - Fabric
+    - FacebookSDK
+    - FBSDKCoreKit
+    - FBSDKMarketingKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -112,6 +140,7 @@ SPEC REPOS:
     - Flurry-iOS-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
+    - Intercom
     - Localytics
     - Mixpanel
     - nanopb
@@ -123,7 +152,11 @@ SPEC CHECKSUMS:
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
   AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Fabric: d7387db9a31aadff63b147a4b91d982c53afaa4f
+  FacebookSDK: 73f54b8b94e09b05647cdef0af147f470cd3edc6
+  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
+  FBSDKMarketingKit: e609f39d74ab273cf52e2f8b7e8829ed412b2827
   Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
   FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
@@ -132,6 +165,7 @@ SPEC CHECKSUMS:
   Flurry-iOS-SDK: e5d6ff8cb79b5044710a0c7ae41b12ac651f4315
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 760ccb53b7c7f40f9c02d8c241f76f841a7a6162
+  Intercom: ab60831c72fe5ff3edfa2d3a2352d06435a85478
   Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
   Mixpanel: 3c3925c27f7a321d5978319a72f53f8f0885afc5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -139,4 +173,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 6e7b4eb38c8c3c5d712a820ec10cc2f0b07d64d1
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3
