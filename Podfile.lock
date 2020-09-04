@@ -24,6 +24,12 @@ PODS:
     - Appboy-iOS-SDK/NewsFeed
   - AppsFlyerFramework (4.8.9)
   - Fabric (1.7.12)
+  - FBSDKCoreKit (7.1.1):
+    - FBSDKCoreKit/Basics (= 7.1.1)
+    - FBSDKCoreKit/Core (= 7.1.1)
+  - FBSDKCoreKit/Basics (7.1.1)
+  - FBSDKCoreKit/Core (7.1.1):
+    - FBSDKCoreKit/Basics
   - Firebase/Analytics (5.9.0):
     - Firebase/Core
   - Firebase/Core (5.9.0):
@@ -89,6 +95,7 @@ DEPENDENCIES:
   - Answers
   - Appboy-iOS-SDK
   - AppsFlyerFramework
+  - FBSDKCoreKit
   - Firebase/Analytics
   - Flurry-iOS-SDK/FlurrySDK
   - Localytics
@@ -113,6 +120,8 @@ SPEC REPOS:
     - Mixpanel
     - nanopb
     - SDWebImage
+  trunk:
+    - FBSDKCoreKit
 
 SPEC CHECKSUMS:
   Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
@@ -120,6 +129,7 @@ SPEC CHECKSUMS:
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
   AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
   Fabric: d7387db9a31aadff63b147a4b91d982c53afaa4f
+  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
   FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
@@ -133,6 +143,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 27e47646f9da8c60f83deba571e7d9a924c84a33
+PODFILE CHECKSUM: e8cb0a71eff901bf6e0b0cedfe617f6beb36353d
 
 COCOAPODS: 1.9.3

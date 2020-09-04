@@ -21,6 +21,11 @@ target 'UmbrellaAppsFlyerTests' do
   pod 'AppsFlyerFramework'
 end
 
+target 'UmbrellaFacebookTests' do
+  platform :ios, '8.0'
+  pod 'FBSDKCoreKit'
+end
+
 target 'UmbrellaFirebaseTests' do
   platform :ios, '8.0'
   pod 'Firebase/Analytics'
