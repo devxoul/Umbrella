@@ -23,7 +23,7 @@ PODS:
     - Appboy-iOS-SDK/Feedback
     - Appboy-iOS-SDK/InAppMessage
     - Appboy-iOS-SDK/NewsFeed
-  - AppsFlyerFramework (4.8.9)
+  - AppsFlyerFramework (6.0.4)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -126,7 +126,6 @@ SPEC REPOS:
     - Analytics
     - Answers
     - Appboy-iOS-SDK
-    - AppsFlyerFramework
     - Bolts
     - Fabric
     - FacebookSDK
@@ -145,15 +144,17 @@ SPEC REPOS:
     - Mixpanel
     - nanopb
     - SDWebImage
+  trunk:
+    - AppsFlyerFramework
 
 SPEC CHECKSUMS:
   Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
   Analytics: 63744ad4afa65c3bcdcdb7a94b62515bde5b3900
-  Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
+  Answers: e039c0f14c543da0c0ea42c6790ee267d42b8a32
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
-  AppsFlyerFramework: 0fc823ec9b77f913e4108caa82c969be033058b1
+  AppsFlyerFramework: acc30e47ea49a058f4bb9b43cf00e976fd80d1ed
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  Fabric: d7387db9a31aadff63b147a4b91d982c53afaa4f
+  Fabric: 83595475c4149d220e7a82c2f6b6a00456fd2c4d
   FacebookSDK: 73f54b8b94e09b05647cdef0af147f470cd3edc6
   FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
   FBSDKMarketingKit: e609f39d74ab273cf52e2f8b7e8829ed412b2827

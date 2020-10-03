@@ -6,10 +6,10 @@ import AppsFlyerLib
 final class AppsFlyerProviderTests: XCTestCase {
   func testAppsFlyerProvider() {
     let provider = AppsFlyerProvider()
-    XCTAssertTrue(provider.cls === AppsFlyerTracker.self)
+    XCTAssertTrue(provider.cls === AppsFlyerLib.self)
     XCTAssertNotNil(provider.instance)
-    XCTAssertTrue(provider.instance === AppsFlyerTracker.shared())
-    XCTAssertEqual(provider.selector, #selector(AppsFlyerTracker.trackEvent(_:withValues:)))
+    XCTAssertTrue(provider.instance === AppsFlyerLib.shared())
+    XCTAssertEqual(provider.selector, #selector(AppsFlyerLib.logEvent(_:withValues:)))
     XCTAssertTrue(provider.responds)
   }
 }
