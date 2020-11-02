@@ -5,12 +5,12 @@ public protocol AnalyticsType {
 }
 
 public protocol ProviderType {
-  func log(_ eventName: String, parameters: [String: Any]?)
+  func log(_ eventName: String, parameters: [String: PrimitiveType]?)
 }
 
 public protocol EventType {
   func name(for provider: ProviderType) -> String?
-  func parameters(for provider: ProviderType) -> [String: Any]?
+  func parameters(for provider: ProviderType) -> [String: PrimitiveType]?
 }
 
 open class Analytics<Event: EventType>: AnalyticsType {
