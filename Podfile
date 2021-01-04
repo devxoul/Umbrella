@@ -55,3 +55,8 @@ target 'UmbrellaSegmentTests' do
   platform :ios, '8.0'
   pod 'Analytics'
 end
+
+target 'UmbrellaPosthogTests' do
+  platform :ios, '8.0'
+  pod 'PostHog'
+end

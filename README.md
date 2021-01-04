@@ -146,6 +146,7 @@ There are several built-in providers.
 * LocalyticsProvider ([Localytics](https://cocoapods.org/pods/Localytics))
 * MixpanelProvider ([Mixpanel](https://cocoapods.org/pods/Mixpanel))
 * SegmentProvider ([Analytics](https://cocoapods.org/pods/Analytics))
+* PosthogProvider ([Posthog](https://cocoapods.org/pods/PostHog))
 
 If there's no provider you're looking for, you can [create an issue](https://github.com/devxoul/Umbrella/issues/new) or [create custom providers](#creating-custom-providers). It's also welcomed to create a pull request for missing services 🎉
 
