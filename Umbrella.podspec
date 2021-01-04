@@ -74,4 +74,9 @@ Pod::Spec.new do |s|
     ss.source_files = "Sources/UmbrellaSegment/*.swift"
     ss.dependency "Umbrella/Core"
   end
+
+  s.subspec "Posthog" do |ss|
+    ss.source_files = "Sources/UmbrellaPosthog/*.swift"
+    ss.dependency "Umbrella/Core"
+  end
 end
