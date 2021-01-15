@@ -1,9 +1,19 @@
 import Foundation
 
 public protocol RuntimeProviderType: ProviderType {
+  associatedtype Parameters = [String: Any]
+  
   var className: String { get }
   var instanceSelectorName: String? { get } // optional
   var selectorName: String { get }
+  
+  func mapParameters(_ parameters: [String: Any]) -> Parameters?
+}
+
+public extension RuntimeProviderType where Parameters == [String: Any] {
+  func mapParameters(_ parameters: [String: Any]) -> Parameters? {
+    return parameters
+  }
 }
 
 public extension RuntimeProviderType {
@@ -37,6 +47,7 @@ public extension RuntimeProviderType {
 
   func log(_ eventName: String, parameters: [String: Any]?) {
     guard self.responds else { return }
+    let parameters = parameters.flatMap(mapParameters)
     if let instance = self.instance {
       _ = instance.perform(self.selector, with: eventName, with: parameters)
     } else {

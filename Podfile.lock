@@ -23,6 +23,9 @@ PODS:
     - Appboy-iOS-SDK/Feedback
     - Appboy-iOS-SDK/InAppMessage
     - Appboy-iOS-SDK/NewsFeed
+  - AppCenter/Analytics (4.1.0):
+    - AppCenter/Core
+  - AppCenter/Core (4.1.0)
   - AppsFlyerFramework (6.0.4)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
@@ -112,6 +115,7 @@ DEPENDENCIES:
   - Analytics
   - Answers
   - Appboy-iOS-SDK
+  - AppCenter/Analytics
   - AppsFlyerFramework
   - FacebookSDK
   - Firebase/Analytics
@@ -145,6 +149,7 @@ SPEC REPOS:
     - nanopb
     - SDWebImage
   trunk:
+    - AppCenter
     - AppsFlyerFramework
 
 SPEC CHECKSUMS:
@@ -152,6 +157,7 @@ SPEC CHECKSUMS:
   Analytics: 63744ad4afa65c3bcdcdb7a94b62515bde5b3900
   Answers: e039c0f14c543da0c0ea42c6790ee267d42b8a32
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
+  AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
   AppsFlyerFramework: acc30e47ea49a058f4bb9b43cf00e976fd80d1ed
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Fabric: 83595475c4149d220e7a82c2f6b6a00456fd2c4d
@@ -172,6 +178,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 8d00f2692229bec58acb049eca1c679917b0c571
+PODFILE CHECKSUM: c02b0a305c1199263a246b4aa196798f491a6aaa
 
 COCOAPODS: 1.9.3
