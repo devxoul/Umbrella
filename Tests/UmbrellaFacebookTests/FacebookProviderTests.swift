@@ -6,9 +6,9 @@ import FBSDKCoreKit
 final class FacebookProviderTests: XCTestCase {
   func testFacebookProvider() {
     let provider = FacebookProvider()
-    XCTAssertTrue(provider.cls === FBSDKAppEvents.self)
+    XCTAssertTrue(provider.cls === AppEvents.self)
     XCTAssertNil(provider.instance)
-    XCTAssertEqual(provider.selector, #selector(FBSDKAppEvents.logEvent(_:parameters:)))
+    XCTAssertEqual(provider.selector, #selector(AppEvents.logEvent(_:parameters:)))
     XCTAssertTrue(provider.responds)
   }
 }

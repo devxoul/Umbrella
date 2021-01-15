@@ -27,28 +27,17 @@ PODS:
     - AppCenter/Core
   - AppCenter/Core (4.1.0)
   - AppsFlyerFramework (6.0.4)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
   - Fabric (1.7.12)
-  - FacebookSDK (4.38.0):
-    - Bolts (~> 1.9)
-    - FacebookSDK/CoreKit (= 4.38.0)
-    - FacebookSDK/MarketingKit (= 4.38.0)
-  - FacebookSDK/CoreKit (4.38.0):
-    - Bolts (~> 1.9)
-    - FBSDKCoreKit
-  - FacebookSDK/MarketingKit (4.38.0):
-    - Bolts (~> 1.9)
-    - FacebookSDK/CoreKit
-    - FBSDKMarketingKit
-  - FBSDKCoreKit (4.38.1):
-    - Bolts (~> 1.9)
-  - FBSDKMarketingKit (4.38.0):
-    - FBSDKCoreKit
+  - FacebookSDK (8.2.0):
+    - FacebookSDK/CoreKit (= 8.2.0)
+  - FacebookSDK/CoreKit (8.2.0):
+    - FBSDKCoreKit (~> 8.2.0)
+  - FBSDKCoreKit (8.2.0):
+    - FBSDKCoreKit/Basics (= 8.2.0)
+    - FBSDKCoreKit/Core (= 8.2.0)
+  - FBSDKCoreKit/Basics (8.2.0)
+  - FBSDKCoreKit/Core (8.2.0):
+    - FBSDKCoreKit/Basics
   - Firebase/Analytics (5.9.0):
     - Firebase/Core
   - Firebase/Core (5.9.0):
@@ -130,11 +119,7 @@ SPEC REPOS:
     - Analytics
     - Answers
     - Appboy-iOS-SDK
-    - Bolts
     - Fabric
-    - FacebookSDK
-    - FBSDKCoreKit
-    - FBSDKMarketingKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -151,6 +136,8 @@ SPEC REPOS:
   trunk:
     - AppCenter
     - AppsFlyerFramework
+    - FacebookSDK
+    - FBSDKCoreKit
 
 SPEC CHECKSUMS:
   Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
@@ -159,11 +146,9 @@ SPEC CHECKSUMS:
   Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
   AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
   AppsFlyerFramework: acc30e47ea49a058f4bb9b43cf00e976fd80d1ed
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Fabric: 83595475c4149d220e7a82c2f6b6a00456fd2c4d
-  FacebookSDK: 73f54b8b94e09b05647cdef0af147f470cd3edc6
-  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
-  FBSDKMarketingKit: e609f39d74ab273cf52e2f8b7e8829ed412b2827
+  FacebookSDK: 7aa80d5e6eaf235f492328ad40c36dbc16440e52
+  FBSDKCoreKit: 4afd6ff53d8133a433dbcda44451c9498f8c6ce4
   Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
   FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
@@ -180,4 +165,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c02b0a305c1199263a246b4aa196798f491a6aaa
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
