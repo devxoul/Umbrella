@@ -22,7 +22,7 @@ target 'UmbrellaAppsFlyerTests' do
 end
 
 target 'UmbrellaFacebookTests' do
-  platform :ios, '8.0'
+  platform :ios, '9.0'
   pod 'FacebookSDK'
 end
 
@@ -54,4 +54,9 @@ end
 target 'UmbrellaSegmentTests' do
   platform :ios, '8.0'
   pod 'Analytics'
+end
+
+target 'UmbrellaAppCenterTests' do
+  platform :ios, '9.0'
+  pod 'AppCenter/Analytics'
 end
