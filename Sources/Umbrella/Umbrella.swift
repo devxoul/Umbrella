@@ -6,10 +6,14 @@ public protocol AnalyticsType {
 }
 
 public protocol ProviderType {
-    var manualLogOnly: Bool? { get set }
+    var manualLogOnly: Bool { get }
     func log(_ eventName: String, parameters: [String: Any]?)
 }
-
+public extension ProviderType {
+    var manualLogOnly: Bool {
+        return false
+    }
+}
 public protocol EventType {
     func name(for provider: ProviderType) -> String?
     func parameters(for provider: ProviderType) -> [String: Any]?
