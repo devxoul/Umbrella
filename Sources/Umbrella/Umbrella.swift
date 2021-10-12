@@ -9,14 +9,17 @@ public protocol ProviderType {
 }
 
 public protocol EventType {
-    /// leave nil if you need to accept all providers
-    var acceptedProviders: [ProviderType]? { get set }
     func name(for provider: ProviderType) -> String?
     func parameters(for provider: ProviderType) -> [String: Any]?
 }
-
 open class Analytics<Event: EventType>: AnalyticsType {
-    private(set) open var providers: [ProviderType] = []
+    private(set) open var providers: [ProviderType] = [] {
+        didSet{
+            self.acceptedProviders = providers
+        }
+    }
+    /// leave nil if you need to accept all providers
+    var acceptedProviders: [ProviderType]?
 
     public init() {
         // I'm Analytics 👋
@@ -27,7 +30,7 @@ open class Analytics<Event: EventType>: AnalyticsType {
     }
 
     open func log(_ event: Event) {
-        let acceptedProviders = event.acceptedProviders ?? self.providers
+        let acceptedProviders = self.acceptedProviders ?? self.providers
         for provider in acceptedProviders {
             guard let eventName = event.name(for: provider) else { continue }
             let parameters = event.parameters(for: provider)
