@@ -1,109 +1,112 @@
 PODS:
-  - Amplitude-iOS (4.3.1)
-  - Analytics (3.6.10)
-  - Answers (1.3.7):
-    - Fabric (~> 1.7.7)
-  - Appboy-iOS-SDK (3.9.0):
-    - Appboy-iOS-SDK/UI (= 3.9.0)
-  - Appboy-iOS-SDK/ContentCards (3.9.0):
+  - Amplitude-iOS (4.10.0)
+  - Analytics (4.0.5)
+  - Answers (1.4.1):
+    - Fabric (~> 1.10.2)
+  - Appboy-iOS-SDK (3.11.0):
+    - Appboy-iOS-SDK/UI (= 3.11.0)
+  - Appboy-iOS-SDK/ContentCards (3.11.0):
     - Appboy-iOS-SDK/Core
     - SDWebImage/GIF (~> 4.0)
-  - Appboy-iOS-SDK/Core (3.9.0)
-  - Appboy-iOS-SDK/Feedback (3.9.0):
+  - Appboy-iOS-SDK/Core (3.11.0)
+  - Appboy-iOS-SDK/Feedback (3.11.0):
     - Appboy-iOS-SDK/Core
-  - Appboy-iOS-SDK/InAppMessage (3.9.0):
-    - Appboy-iOS-SDK/Core
-    - SDWebImage/GIF (~> 4.0)
-  - Appboy-iOS-SDK/NewsFeed (3.9.0):
+  - Appboy-iOS-SDK/InAppMessage (3.11.0):
     - Appboy-iOS-SDK/Core
     - SDWebImage/GIF (~> 4.0)
-  - Appboy-iOS-SDK/UI (3.9.0):
+  - Appboy-iOS-SDK/NewsFeed (3.11.0):
+    - Appboy-iOS-SDK/Core
+    - SDWebImage/GIF (~> 4.0)
+  - Appboy-iOS-SDK/UI (3.11.0):
     - Appboy-iOS-SDK/ContentCards
     - Appboy-iOS-SDK/Core
     - Appboy-iOS-SDK/Feedback
     - Appboy-iOS-SDK/InAppMessage
     - Appboy-iOS-SDK/NewsFeed
-  - AppsFlyerFramework (6.0.4)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
-  - Fabric (1.7.12)
-  - FacebookSDK (4.38.0):
-    - Bolts (~> 1.9)
-    - FacebookSDK/CoreKit (= 4.38.0)
-    - FacebookSDK/MarketingKit (= 4.38.0)
-  - FacebookSDK/CoreKit (4.38.0):
-    - Bolts (~> 1.9)
-    - FBSDKCoreKit
-  - FacebookSDK/MarketingKit (4.38.0):
-    - Bolts (~> 1.9)
-    - FacebookSDK/CoreKit
-    - FBSDKMarketingKit
-  - FBSDKCoreKit (4.38.1):
-    - Bolts (~> 1.9)
-  - FBSDKMarketingKit (4.38.0):
-    - FBSDKCoreKit
-  - Firebase/Analytics (5.9.0):
+  - AppsFlyerFramework (6.2.6):
+    - AppsFlyerFramework/Main (= 6.2.6)
+  - AppsFlyerFramework/Main (6.2.6)
+  - Fabric (1.10.2)
+  - FacebookSDK (7.1.1):
+    - FacebookSDK/CoreKit (= 7.1.1)
+  - FacebookSDK/CoreKit (7.1.1):
+    - FBSDKCoreKit (~> 7.1.1)
+  - FBSDKCoreKit (7.1.1):
+    - FBSDKCoreKit/Basics (= 7.1.1)
+    - FBSDKCoreKit/Core (= 7.1.1)
+  - FBSDKCoreKit/Basics (7.1.1)
+  - FBSDKCoreKit/Core (7.1.1):
+    - FBSDKCoreKit/Basics
+  - Firebase/Analytics (6.34.0):
     - Firebase/Core
-  - Firebase/Core (5.9.0):
+  - Firebase/Core (6.34.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.2.0)
-  - Firebase/CoreOnly (5.9.0):
-    - FirebaseCore (= 5.1.4)
-  - FirebaseAnalytics (5.2.0):
-    - FirebaseCore (~> 5.1)
-    - FirebaseInstanceID (~> 3.2)
-    - GoogleAppMeasurement (~> 5.2)
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - FirebaseCore (5.1.4):
-    - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseInstanceID (3.2.2):
-    - FirebaseCore (~> 5.1)
-    - GoogleUtilities/Environment (~> 5.3)
-    - GoogleUtilities/UserDefaults (~> 5.3)
+    - FirebaseAnalytics (= 6.9.0)
+  - Firebase/CoreOnly (6.34.0):
+    - FirebaseCore (= 6.10.4)
+  - FirebaseAnalytics (6.9.0):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.7)
+    - GoogleAppMeasurement (= 6.9.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - FirebaseCore (6.10.4):
+    - FirebaseCoreDiagnostics (~> 1.6)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+  - FirebaseCoreDiagnostics (1.7.0):
+    - GoogleDataTransport (~> 7.4)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+    - nanopb (~> 1.30906.0)
+  - FirebaseInstallations (1.7.0):
+    - FirebaseCore (~> 6.10)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+    - PromisesObjC (~> 1.2)
   - FLAnimatedImage (1.0.12)
-  - Flurry-iOS-SDK/FlurrySDK (9.2.0)
-  - GoogleAppMeasurement (5.2.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
-    - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (5.3.0):
+  - Flurry-iOS-SDK/FlurrySDK (11.3.0)
+  - GoogleAppMeasurement (6.9.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - GoogleDataTransport (7.5.1):
+    - nanopb (~> 1.30906.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (5.3.0)
-  - GoogleUtilities/Logger (5.3.0):
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (5.3.0):
+  - GoogleUtilities/MethodSwizzler (6.7.2):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (5.3.0):
+  - GoogleUtilities/Network (6.7.2):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (5.3.0)"
-  - GoogleUtilities/Reachability (5.3.0):
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (5.3.0):
+  - GoogleUtilities/UserDefaults (6.7.2):
     - GoogleUtilities/Logger
-  - Intercom (5.1.9)
-  - Localytics (5.3.0)
-  - Mixpanel (3.3.3)
-  - nanopb (0.3.8):
-    - nanopb/decode (= 0.3.8)
-    - nanopb/encode (= 0.3.8)
-  - nanopb/decode (0.3.8)
-  - nanopb/encode (0.3.8)
-  - SDWebImage/Core (4.4.2)
-  - SDWebImage/GIF (4.4.2):
+  - Intercom (5.5.2)
+  - Localytics (6.2.1.17)
+  - Mixpanel (3.6.0)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - PromisesObjC (1.2.10)
+  - SDWebImage/Core (4.4.8)
+  - SDWebImage/GIF (4.4.8):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
 
@@ -121,57 +124,58 @@ DEPENDENCIES:
   - Mixpanel
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Amplitude-iOS
     - Analytics
     - Answers
     - Appboy-iOS-SDK
-    - Bolts
+    - AppsFlyerFramework
     - Fabric
     - FacebookSDK
     - FBSDKCoreKit
-    - FBSDKMarketingKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
-    - FirebaseInstanceID
+    - FirebaseCoreDiagnostics
+    - FirebaseInstallations
     - FLAnimatedImage
     - Flurry-iOS-SDK
     - GoogleAppMeasurement
+    - GoogleDataTransport
     - GoogleUtilities
     - Intercom
     - Localytics
     - Mixpanel
     - nanopb
+    - PromisesObjC
     - SDWebImage
-  trunk:
-    - AppsFlyerFramework
 
 SPEC CHECKSUMS:
-  Amplitude-iOS: df355e2be58972041acde9576a2ae97c217bf941
-  Analytics: 63744ad4afa65c3bcdcdb7a94b62515bde5b3900
-  Answers: e039c0f14c543da0c0ea42c6790ee267d42b8a32
-  Appboy-iOS-SDK: c245f36aafe6e1b5249a8924e598e82e1c233f5d
-  AppsFlyerFramework: acc30e47ea49a058f4bb9b43cf00e976fd80d1ed
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  Fabric: 83595475c4149d220e7a82c2f6b6a00456fd2c4d
-  FacebookSDK: 73f54b8b94e09b05647cdef0af147f470cd3edc6
-  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
-  FBSDKMarketingKit: e609f39d74ab273cf52e2f8b7e8829ed412b2827
-  Firebase: 383fa29aca93e371cab776b48a5c66544d3c2003
-  FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
-  FirebaseCore: 2a84b6b325792a4319ef71ee18819dcba08d2fd7
-  FirebaseInstanceID: 78ba376fcd5b94c001f9999b2cbd3d1f1e56e78d
+  Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
+  Analytics: 4bcf052c91e1f3339219e83d6a036fb2bd7c218d
+  Answers: dbcfde547ceb35db19147aee93358bb2a2406c05
+  Appboy-iOS-SDK: 8083e5b8035c8e7f81a90f46f2154b3e35ce7aae
+  AppsFlyerFramework: 1ac92ce51999e77806b0ecf6ff7b72af8ee8bea4
+  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
+  FacebookSDK: 77d80e61681768f1b17db5bfc8646a9aa89d658d
+  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
+  Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
+  FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
+  FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
+  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
+  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  Flurry-iOS-SDK: e5d6ff8cb79b5044710a0c7ae41b12ac651f4315
-  GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
-  GoogleUtilities: 760ccb53b7c7f40f9c02d8c241f76f841a7a6162
-  Intercom: ab60831c72fe5ff3edfa2d3a2352d06435a85478
-  Localytics: aa49adf35bd480a598c98f525a86d4c5b91debe8
-  Mixpanel: 3c3925c27f7a321d5978319a72f53f8f0885afc5
-  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Flurry-iOS-SDK: 494e340b623f1413711603dc0184f1fd4183e0d3
+  GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
+  GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  Intercom: 1151a15e5e7931d8e401671a4357239d44325159
+  Localytics: e16702979bb9c98dfd38a6a2cea74fc6721ded82
+  Mixpanel: 446b6e7713aa34a9a3516ff7648d56551384fc94
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
 
 PODFILE CHECKSUM: 8d00f2692229bec58acb049eca1c679917b0c571
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

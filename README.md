@@ -152,7 +152,7 @@ If there's no provider you're looking for, you can [create an issue](https://git
 ### Creating Custom Providers
 
 If there's no built-in provider for the serivce you're using, you can also create your own. It's easy to create a provider: just create a class and conform to the protocol `ProviderType`.
-
+ 
 ```swift
 final class MyAwesomeProvider: ProviderType {
   func log(_ eventName: String, parameters: [String: Any]?) {
