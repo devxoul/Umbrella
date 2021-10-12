@@ -1,11 +1,12 @@
 public protocol AnalyticsType {
     associatedtype Event: EventType
-    var acceptedProviders: [ProviderType]? { get set }
     func register(provider: ProviderType)
     func log(_ event: Event)
+    func log(_ event: Event, into provider: ProviderType)
 }
 
 public protocol ProviderType {
+    var manualLogOnly: Bool? { get set }
     func log(_ eventName: String, parameters: [String: Any]?)
 }
 
@@ -14,13 +15,7 @@ public protocol EventType {
     func parameters(for provider: ProviderType) -> [String: Any]?
 }
 open class Analytics<Event: EventType>: AnalyticsType {
-    private(set) open var providers: [ProviderType] = [] {
-        didSet{
-            self.acceptedProviders = providers
-        }
-    }
-    /// leave nil if you need to accept all providers
-    public var acceptedProviders: [ProviderType]?
+    private(set) open var providers: [ProviderType] = []
 
     public init() {
         // I'm Analytics 👋
@@ -31,11 +26,16 @@ open class Analytics<Event: EventType>: AnalyticsType {
     }
 
     open func log(_ event: Event) {
-        let acceptedProviders = self.acceptedProviders ?? self.providers
-        for provider in acceptedProviders {
+        for provider in self.providers {
+            guard provider.manualLogOnly == false else { return }
             guard let eventName = event.name(for: provider) else { continue }
             let parameters = event.parameters(for: provider)
             provider.log(eventName, parameters: parameters)
         }
+    }
+    open func log(_ event: Event, into provider: ProviderType){
+        guard let eventName = event.name(for: provider) else { return }
+        let parameters = event.parameters(for: provider)
+        provider.log(eventName, parameters: parameters)
     }
 }
