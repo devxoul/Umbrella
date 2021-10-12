@@ -19,7 +19,7 @@ open class Analytics<Event: EventType>: AnalyticsType {
         }
     }
     /// leave nil if you need to accept all providers
-    var acceptedProviders: [ProviderType]?
+    public var acceptedProviders: [ProviderType]?
 
     public init() {
         // I'm Analytics 👋
