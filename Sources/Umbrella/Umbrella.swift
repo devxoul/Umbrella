@@ -1,6 +1,6 @@
 public protocol AnalyticsType {
     associatedtype Event: EventType
-    var acceptedProviders: [ProviderType]?
+    var acceptedProviders: [ProviderType]? { get set }
     func register(provider: ProviderType)
     func log(_ event: Event)
 }
