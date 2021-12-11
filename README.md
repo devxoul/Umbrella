@@ -95,11 +95,11 @@ extension MyAppEvent: EventType {
   /// Parameters to be logged
   func parameters(for provider: ProviderType) -> [String: Any]? {
     switch self {
-    case let .signup(username):
+    case let .signup(let username):
       return ["username": username]
-    case let .viewContent(productID):
+    case let .viewContent(let productID):
       return ["product_id": productID]
-    case let .purchase(productID, price):
+    case let .purchase(let productID, let price):
       return ["product_id": productID, "price": price]
     }
   }
@@ -116,7 +116,7 @@ You can define an `Analytics` instance anywhere but it's recommended to define a
 let analytics = Analytics<MyAppEvent>()
 ```
 
-Then you should register providers. A prodiver is a wrapper for an actual analytics service such as Firebase and Fabric Answers. It's recommended to register providers in `application(_:didFinishLaunchingWithOptions:)`.
+Then you should register providers. A provider is a wrapper for an actual analytics service such as Firebase and Fabric Answers. It's recommended to register providers in `application(_:didFinishLaunchingWithOptions:)`.
 
 ```swift
 analytics.register(provider: AnswersProvider())
